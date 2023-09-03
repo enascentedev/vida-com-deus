@@ -21,7 +21,7 @@ export default {
 			<div class="indicator">
 				<div class="indicator-item indicator-bottom">
 					<router-link to="/questionario">
-						<button class="btn btn-primary">Acessar</button></router-link
+						<button class="btn btn-info">Acessar</button></router-link
 					>
 				</div>
 				<div class="card border">

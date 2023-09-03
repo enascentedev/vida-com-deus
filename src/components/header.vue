@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-	<header class="bg-blue-800 opacity-40">
+	<header class="bg-info opacity-40">
 		<nav
 			class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
 			aria-label="Global">
