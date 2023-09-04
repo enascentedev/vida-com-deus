@@ -1,17 +1,19 @@
 <script>
 import Header from "@/components/header.vue";
-import Artigo from "@/components/artigo.vue";
+import Footer from "@/components/footer.vue";
+import ArtigoHome from "@/components/artigoHome.vue";
 export default {
 	components: {
 		Header,
-		Artigo,
+		ArtigoHome,
+		Footer,
 	},
 };
 </script>
 
 <template>
-	<header>
-		<Header />
-	</header>
-	<main><Artigo /></main>
+	<Header />
+
+	<main><ArtigoHome /></main>
+	<Footer />
 </template>

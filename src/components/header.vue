@@ -43,8 +43,10 @@ export default {
 				<a href="#" class="text-sm font-semibold leading-6 text-white"
 					>Leitura diária</a
 				>
-				<a href="#" class="text-sm font-semibold leading-6 text-white"
-					>Artigo semanal</a
+				<router-link to="/artigosemanal">
+					<a href="#" class="text-sm font-semibold leading-6 text-white"
+						>Artigo semanal</a
+					></router-link
 				>
 				<a href="#" class="text-sm font-semibold leading-6 text-white"
 					>Bíblia</a
