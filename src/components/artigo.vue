@@ -3,6 +3,7 @@ import { ref, reactive } from "vue";
 import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
 import amiltonMenezes from "@/assets/imagens/amiltonMenezes.jpg";
 import escolhas from "@/assets/imagens/escolhas.jpg";
+import amanhecer from "@/assets/imagens/amanhecer.jpg";
 export default {
 	name: "Artigo",
 	setup() {
@@ -10,6 +11,7 @@ export default {
 			tempoRefletir,
 			amiltonMenezes,
 			escolhas,
+			amanhecer,
 		};
 	},
 };
@@ -141,6 +143,80 @@ export default {
 									falta de oportunidades, os problemas, enfim. Difícil é aceitar
 									o fato de que a maioria das derrotas tem raízes nas decisões
 									erradas que tomamos.
+								</p>
+							</div>
+							<div class="mt-6 flex border-t border-gray-900/5 pt-6">
+								<div class="relative flex items-center gap-x-4">
+									<img
+										:src="amiltonMenezes"
+										alt="amilton"
+										class="h-10 w-10 rounded-full bg-gray-50" />
+									<div class="text-sm leading-6">
+										<p class="font-semibold text-gray-900">
+											<a href="#">
+												<span class="absolute inset-0"></span>
+												Amilton Menezes
+											</a>
+										</p>
+										<p class="text-gray-600">Pastor</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="relative isolate flex flex-col gap-8 lg:flex-row">
+						<div
+							class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+							<img :src="amanhecer" alt="Minha Imagem" />
+							<img
+								:src="amanhecer"
+								alt="Minha Imagem"
+								class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
+							<div
+								class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+						</div>
+						<div>
+							<div class="flex items-center gap-x-4 text-xs">
+								<time datetime="2020-03-16" class="text-gray-500"
+									>Set 04, 2023</time
+								>
+								<!-- aqui coloco # q conforme o vídeo-->
+								<a
+									href="#"
+									class="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-200"
+									>Auto ajuda</a
+								>
+							</div>
+							<div class="group relative max-w-xl">
+								<h3
+									class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+									<a href="#">
+										<span class="absolute inset-0"></span>
+										O plano de Deus para você
+									</a>
+								</h3>
+								<p class="mt-5 text-sm leading-6 text-gray-600">
+									Não queira tentar garantir seu futuro com seus próprios
+									planos. Ele, em Sua infinita sabedoria, sabe e deseja o que é
+									melhor para você. Por isso, deseje estar no centro dos planos
+									de Deus destinados ao seu bem, com a certeza de que Ele lhe
+									dará todo o necessário para lidar com o que vem pela frente.
+									Quando orar, confesse a Deus os seus temores e suas dúvidas e
+									peça ao bondoso Pai celestial que Ele o fortaleça para que
+									você persevere sempre. Lembre-se de que Deus “é capaz de fazer
+									infinitamente mais do que tudo o que pedimos ou pensamos, de
+									acordo com o Seu poder que atua em nós” (Ef 3:20). Mantenha os
+									olhos fixos no Senhor, e Ele o guardará em perfeita paz
+									enquanto o conduz ao futuro que preparou especialmente para
+									você. Na primeira carta escrita por Pedro, encontramos esta
+									preciosidade: “Humilhai-vos, portanto, sob a poderosa mão de
+									Deus, para que Ele, em tempo oportuno, vos exalte, lançando
+									sobre Ele toda a vossa ansiedade, porque Ele tem cuidado de
+									vós” (5:6 e 7). Lance todos os seus cuidados sobre o Senhor,
+									sabendo que Ele cuida de você e não o deixará cair. O Senhor
+									deseja segurar a sua mão hoje para que você ande ao lado dEle
+									em direção ao futuro que Ele mesmo lhe preparou.
 								</p>
 							</div>
 							<div class="mt-6 flex border-t border-gray-900/5 pt-6">
