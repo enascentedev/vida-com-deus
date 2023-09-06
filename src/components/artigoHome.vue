@@ -30,6 +30,13 @@ export default {
 				autor: "Amilton Menezes",
 				titulo: "O plano de Deus para você",
 			},
+			{
+				imagem: escolhas,
+				data: "Set 05, 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Muitas são as aflições do justo, o Senhor de todas o livra",
+			},
 		]);
 
 		return {
