@@ -1,0 +1,32 @@
+{
+	"artigos": [
+		{
+			"imagem": "tempoRefletir.jpg",
+			"data": "Set 02, 2023",
+			"autorImagem": "amiltonMenezes.jpg",
+			"autor": "Amilton Menezes",
+			"titulo": "O tempo nunca para !"
+		},
+		{
+			"imagem": "escolhas.jpg",
+			"data": "Set 03, 2023",
+			"autorImagem": "amiltonMenezes.jpg",
+			"autor": "Amilton Menezes",
+			"titulo": "Que tipo de escolhas você tem feito?"
+		},
+		{
+			"imagem": "amanhecer.jpg",
+			"data": "Set 04, 2023",
+			"autorImagem": "amiltonMenezes.jpg",
+			"autor": "Amilton Menezes",
+			"titulo": "O plano de Deus para você"
+		},
+		{
+			"imagem": "escolhas.jpg",
+			"data": "Set 05, 2023",
+			"autorImagem": "amiltonMenezes.jpg",
+			"autor": "Amilton Menezes",
+			"titulo": "Muitas são as aflições do justo, o Senhor de todas o livra"
+		}
+	]
+}
