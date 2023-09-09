@@ -1,51 +1,3 @@
-<script>
-import { ref, onMounted } from "vue";
-import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
-import amiltonMenezes from "@/assets/imagens/amiltonMenezes.jpg";
-import escolhas from "@/assets/imagens/escolhas.jpg";
-import amanhecer from "@/assets/imagens/amanhecer.jpg";
-
-export default {
-	name: "ArtigoHome",
-	setup() {
-		const artigos = ref([
-			{
-				imagem: tempoRefletir,
-				data: "Set 02, 2023",
-				autorImagem: amiltonMenezes,
-				autor: "Amilton Menezes",
-				titulo: "O tempo nunca para !",
-			},
-			{
-				imagem: escolhas,
-				data: "Set 03, 2023",
-				autorImagem: amiltonMenezes,
-				autor: "Amilton Menezes",
-				titulo: "Que tipo de escolhas você tem feito?",
-			},
-			{
-				imagem: amanhecer,
-				data: "Set 04, 2023",
-				autorImagem: amiltonMenezes,
-				autor: "Amilton Menezes",
-				titulo: "O plano de Deus para você",
-			},
-			{
-				imagem: escolhas,
-				data: "Set 05, 2023",
-				autorImagem: amiltonMenezes,
-				autor: "Amilton Menezes",
-				titulo: "Muitas são as aflições do justo, o Senhor de todas o livra",
-			},
-		]);
-
-		return {
-			artigos,
-		};
-	},
-};
-</script>
-
 <template>
 	<div class="bg-white py-24 sm:py-14">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -101,3 +53,25 @@ export default {
 		</div>
 	</div>
 </template>
+
+<script>
+import { ref, onMounted } from "vue";
+import { artigosStore } from "@/stores/storeArtigo";
+
+export default {
+	name: "ArtigoHome",
+	setup() {
+		// Obtenha a store do Pinia
+		const store = artigosStore();
+
+		// Obtenha a lista de artigos da store
+		const artigos = store.listaDeArtigos;
+
+		// Função para carregar mais artigos se necessário
+
+		return {
+			artigos,
+		};
+	},
+};
+</script>
