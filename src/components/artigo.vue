@@ -4,14 +4,18 @@ import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
 import amiltonMenezes from "@/assets/imagens/amiltonMenezes.jpg";
 import escolhas from "@/assets/imagens/escolhas.jpg";
 import amanhecer from "@/assets/imagens/amanhecer.jpg";
+import { artigosStore } from "@/stores/storeArtigo";
 export default {
 	name: "Artigo",
 	setup() {
+		const store = artigosStore();
+		const artigos = store.listaDeArtigos;
 		return {
 			tempoRefletir,
 			amiltonMenezes,
 			escolhas,
 			amanhecer,
+			artigos,
 		};
 	},
 };
@@ -44,12 +48,15 @@ export default {
 					meditar e refletir.
 				</p>
 				<div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
-					<article class="relative isolate flex flex-col gap-8 lg:flex-row">
+					<article
+						v-for="(artigo, index) in artigos"
+						:key="index"
+						class="relative isolate flex flex-col gap-8 lg:flex-row">
 						<div
 							class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
 							<img :src="tempoRefletir" alt="Minha Imagem" />
 							<img
-								:src="tempoRefletir"
+								:src="artigo.imagem"
 								alt="Minha Imagem"
 								class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
 							<div
@@ -57,14 +64,14 @@ export default {
 						</div>
 						<div>
 							<div class="flex items-center gap-x-4 text-xs">
-								<time datetime="2020-03-16" class="text-gray-500"
-									>Set 02, 2023</time
-								>
+								<time :datetime="artigo.data" class="text-gray-500">{{
+									artigo.data
+								}}</time>
 								<!-- aqui coloco # q conforme o vídeo-->
 								<a
 									href="#"
 									class="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-200"
-									>Auto ajuda</a
+									>{{ artigo.categoria }}</a
 								>
 							</div>
 							<div class="group relative max-w-xl">
@@ -72,15 +79,11 @@ export default {
 									class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
 									<a href="#">
 										<span class="absolute inset-0"></span>
-										O tempo nunca para !
+										{{ artigo.titulo }}
 									</a>
 								</h3>
 								<p class="mt-5 text-sm leading-6 text-gray-600">
-									O relógio da vida só para uma vez e homem algum tem poder
-									mesmo de imaginar, quando os ponteiros vão deixar de girar.
-									Cedo ou tarde? Impossível saber, agora é o único tempo que
-									tendes à mão. Não confieis no amanhã, pois o relógio poderá
-									estar parado então.
+									{{ artigo.conteudo }}
 								</p>
 							</div>
 							<div class="mt-6 flex border-t border-gray-900/5 pt-6">
@@ -93,143 +96,7 @@ export default {
 										<p class="font-semibold text-gray-900">
 											<a href="#">
 												<span class="absolute inset-0"></span>
-												Amilton Menezes
-											</a>
-										</p>
-										<p class="text-gray-600">Pastor</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="relative isolate flex flex-col gap-8 lg:flex-row">
-						<div
-							class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-							<img :src="escolhas" alt="Minha Imagem" />
-							<img
-								:src="escolhas"
-								alt="Minha Imagem"
-								class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
-							<div
-								class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-						</div>
-						<div>
-							<div class="flex items-center gap-x-4 text-xs">
-								<time datetime="2020-03-16" class="text-gray-500"
-									>Set 03, 2023</time
-								>
-								<!-- aqui coloco # q conforme o vídeo-->
-								<a
-									href="#"
-									class="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-200"
-									>Auto ajuda</a
-								>
-							</div>
-							<div class="group relative max-w-xl">
-								<h3
-									class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-									<a href="#">
-										<span class="absolute inset-0"></span>
-										Que tipo de escolhas você tem feito?
-									</a>
-								</h3>
-								<p class="mt-5 text-sm leading-6 text-gray-600">
-									Todo ser humano nasce livre. As escolhas fazem a diferença.
-									Uns escolhem para o bem, outros para o mal. No verso de hoje,
-									Salomão coloca a responsabilidade da vitória ou da derrota nas
-									mãos da própria pessoa. É verdade que existem muitas
-									explicações para a derrota. O clima, as circunstâncias, a
-									falta de oportunidades, os problemas, enfim. Difícil é aceitar
-									o fato de que a maioria das derrotas tem raízes nas decisões
-									erradas que tomamos.
-								</p>
-							</div>
-							<div class="mt-6 flex border-t border-gray-900/5 pt-6">
-								<div class="relative flex items-center gap-x-4">
-									<img
-										:src="amiltonMenezes"
-										alt="amilton"
-										class="h-10 w-10 rounded-full bg-gray-50" />
-									<div class="text-sm leading-6">
-										<p class="font-semibold text-gray-900">
-											<a href="#">
-												<span class="absolute inset-0"></span>
-												Amilton Menezes
-											</a>
-										</p>
-										<p class="text-gray-600">Pastor</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="relative isolate flex flex-col gap-8 lg:flex-row">
-						<div
-							class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-							<img :src="amanhecer" alt="Minha Imagem" />
-							<img
-								:src="amanhecer"
-								alt="Minha Imagem"
-								class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
-							<div
-								class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-						</div>
-						<div>
-							<div class="flex items-center gap-x-4 text-xs">
-								<time datetime="2020-03-16" class="text-gray-500"
-									>Set 04, 2023</time
-								>
-								<!-- aqui coloco # q conforme o vídeo-->
-								<a
-									href="#"
-									class="relative z-10 rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-200"
-									>Auto ajuda</a
-								>
-							</div>
-							<div class="group relative max-w-xl">
-								<h3
-									class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-									<a href="#">
-										<span class="absolute inset-0"></span>
-										O plano de Deus para você
-									</a>
-								</h3>
-								<p class="mt-5 text-sm leading-6 text-gray-600">
-									Não queira tentar garantir seu futuro com seus próprios
-									planos. Ele, em Sua infinita sabedoria, sabe e deseja o que é
-									melhor para você. Por isso, deseje estar no centro dos planos
-									de Deus destinados ao seu bem, com a certeza de que Ele lhe
-									dará todo o necessário para lidar com o que vem pela frente.
-									Quando orar, confesse a Deus os seus temores e suas dúvidas e
-									peça ao bondoso Pai celestial que Ele o fortaleça para que
-									você persevere sempre. Lembre-se de que Deus “é capaz de fazer
-									infinitamente mais do que tudo o que pedimos ou pensamos, de
-									acordo com o Seu poder que atua em nós” (Ef 3:20). Mantenha os
-									olhos fixos no Senhor, e Ele o guardará em perfeita paz
-									enquanto o conduz ao futuro que preparou especialmente para
-									você. Na primeira carta escrita por Pedro, encontramos esta
-									preciosidade: “Humilhai-vos, portanto, sob a poderosa mão de
-									Deus, para que Ele, em tempo oportuno, vos exalte, lançando
-									sobre Ele toda a vossa ansiedade, porque Ele tem cuidado de
-									vós” (5:6 e 7). Lance todos os seus cuidados sobre o Senhor,
-									sabendo que Ele cuida de você e não o deixará cair. O Senhor
-									deseja segurar a sua mão hoje para que você ande ao lado dEle
-									em direção ao futuro que Ele mesmo lhe preparou.
-								</p>
-							</div>
-							<div class="mt-6 flex border-t border-gray-900/5 pt-6">
-								<div class="relative flex items-center gap-x-4">
-									<img
-										:src="amiltonMenezes"
-										alt="amilton"
-										class="h-10 w-10 rounded-full bg-gray-50" />
-									<div class="text-sm leading-6">
-										<p class="font-semibold text-gray-900">
-											<a href="#">
-												<span class="absolute inset-0"></span>
-												Amilton Menezes
+												{{ artigo.autor }}
 											</a>
 										</p>
 										<p class="text-gray-600">Pastor</p>

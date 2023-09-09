@@ -1,32 +1,67 @@
 {
 	"artigos": [
 		{
-			"imagem": "tempoRefletir.jpg",
+			"categoria": "#autoajuda",
+			"imagem": "/img/tempoRefletir.jpg",
 			"data": "Set 02, 2023",
-			"autorImagem": "amiltonMenezes.jpg",
+			"autorImagem": "/img/amiltonMenezes.jpg",
 			"autor": "Amilton Menezes",
-			"titulo": "O tempo nunca para !"
+			"titulo": "O tempo nunca para !",
+			"conteudo": "O relógio da vida só para uma vez e homem algum tem poder mesmo de imaginar, quando os ponteiros vão deixar de girar. Cedo ou tarde? Impossível saber, agora é o único tempo que tendes à mão. Não confieis no amanhã, pois o relógio poderá estar parado então."
 		},
 		{
-			"imagem": "escolhas.jpg",
+			"categoria": "#autoajuda",
+			"imagem": "/img/escolhas.jpg",
 			"data": "Set 03, 2023",
-			"autorImagem": "amiltonMenezes.jpg",
+			"autorImagem": "/img/amiltonMenezes.jpg",
 			"autor": "Amilton Menezes",
-			"titulo": "Que tipo de escolhas você tem feito?"
+			"titulo": "Que tipo de escolhas você tem feito?",
+			"conteudo": "Todo ser humano nasce livre. As escolhas fazem a diferença. Uns escolhem para o bem, outros para o mal. No verso de hoje, Salomão coloca a responsabilidade da vitória ou da derrota nas mãos da própria pessoa. É verdade que existem muitas explicações para a derrota. O clima, as circunstâncias, a falta de oportunidades, os problemas, enfim. Difícil é aceitar o fato de que a maioria das derrotas tem raízes nas decisões erradas que tomamos."
 		},
 		{
-			"imagem": "amanhecer.jpg",
+			"categoria": "#autoajuda",
+			"imagem": "/img/amanhecer.jpg",
 			"data": "Set 04, 2023",
-			"autorImagem": "amiltonMenezes.jpg",
+			"autorImagem": "/img/amiltonMenezes.jpg",
 			"autor": "Amilton Menezes",
-			"titulo": "O plano de Deus para você"
+			"titulo": "O plano de Deus para você",
+			"conteudo": "Não queira tentar garantir seu futuro com seus próprios planos. Ele, em Sua infinita sabedoria, sabe e deseja o que é melhor para você. Por isso, deseje estar no centro dos planos de Deus destinados ao seu bem, com a certeza de que Ele lhe dará todo o necessário para lidar com o que vem pela frente. Quando orar, confesse a Deus os seus temores e suas dúvidas e peça ao bondoso Pai celestial que Ele o fortaleça para que você persevere sempre. Lembre-se de que Deus 'é capaz de fazer infinitamente mais do que tudo o que pedimos ou pensamos, de acordo com o Seu poder que atua em nós' (Ef 3:20). Mantenha os olhos fixos no Senhor, e Ele o guardará em perfeita paz enquanto o conduz ao futuro que preparou especialmente para você. Na primeira carta escrita por Pedro, encontramos esta preciosidade: 'Humilhai-vos, portanto, sob a poderosa mão de Deus, para que Ele, em tempo oportuno, vos exalte, lançando sobre Ele toda a vossa ansiedade, porque Ele tem cuidado de vós' (5:6 e 7). Lance todos os seus cuidados sobre o Senhor, sabendo que Ele cuida de você e não o deixará cair. O Senhor deseja segurar a sua mão hoje para que você ande ao lado dEle em direção ao futuro que Ele mesmo lhe preparou."
 		},
 		{
-			"imagem": "escolhas.jpg",
+			"categoria": "#autoajuda",
+			"imagem": "/img/aflicoes.jpg",
 			"data": "Set 05, 2023",
-			"autorImagem": "amiltonMenezes.jpg",
+			"autorImagem": "/img/amiltonMenezes.jpg",
 			"autor": "Amilton Menezes",
-			"titulo": "Muitas são as aflições do justo, o Senhor de todas o livra"
+			"titulo": "Muitas são as aflições do justo, o Senhor de todas o livra",
+			"conteudo": "vazio"
+		},
+		{
+			"categoria": "#autoajuda",
+			"imagem": "/img/coracaoQuebrantado.jpg",
+			"data": "Set 06, 2023",
+			"autorImagem": "/img/amiltonMenezes.jpg",
+			"autor": "Amilton Menezes",
+			"titulo": "Opiniões conflitantes tornam-se campos de batalha entre indivíduos.",
+			"conteudo": "vazio"
+		},
+		{
+			"categoria": "#autoajuda",
+			"imagem": "/img/olhosdeDeus.jpg",
+			"data": "Set 07, 2023",
+			"autorImagem": "/img/amiltonMenezes.jpg",
+			"autor": "Amilton Menezes",
+			"titulo": "Como enxergar com os olhos de Deus?",
+			"conteudo": "vazio"
+		},
+		{
+			"categoria": "#autoajuda",
+			"imagem": "/img/ansiedade.jpg",
+			"data": "Set 08, 2023",
+			"autorImagem": "/img/amiltonMenezes.jpg",
+			"autor": "Amilton Menezes",
+			"titulo": "Substitua a ansiedade",
+			"conteudo": "vazio"
 		}
 	]
 }
