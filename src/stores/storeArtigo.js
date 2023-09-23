@@ -111,6 +111,96 @@ export const artigosStore = defineStore({
 				conteudo:
 					"A vida é uma rosa cheia de espinhos. Há problemas, todos os dias. Diante deles, o ser humano tem apenas duas alternativas: ou confia em Deus e segue as instruções divinas ou confia no próprio entendimento e tenta encontrar a saída para seus problemas nas próprias forças.\n\nConfiar é condição necessária para desenvolver qualquer relacionamento. Não há como viver sem confiar. Tudo que fazemos envolve confiança. Confiamos no padeiro, no motorista de ônibus, no piloto do avião… Muitas vezes, a confiança é traída. Por mais que o ser humano seja bom e tente cumprir suas promessas, está limitado pela sua própria humanidade. Por exemplo: Eu prometo dar uma bicicleta para meu neto no final do ano, e o que acontece se eu morrer dentro de um mês?\n\nPromessas humanas são falíveis, por serem humanas. Intenções humanas, com frequência, são egoístas e mentirosas. Nascem de um coração contaminado pelo vírus do pecado. Projetos humanos são passageiros e limitados, por causa da temporalidade da criatura.\n\nPor isso, o conselho de Salomão é: “O que confia no Senhor, esse é feliz.” É loucura confiar em Deus e, ao mesmo tempo, procurar a solução para os problemas da vida no esforço humano. “Confiar no Senhor” significa entrega, submissão e obediência. Essas atitudes não são próprias da natureza humana, mas são a única garantia de vitória. Por isso, o texto diz: “Atenta para o ensino [e] acha o bem.”\n\nComo todo dia, hoje também é um dia de decisões. Você está vivo. Viver é decidir. Para o bem ou para o mal, para a tristeza ou para a alegria. Dê a Deus a chance de ser o seu guia. Afinal de contas, o Criador conhece o caminho melhor do que a criatura. Ele é Deus. Suas promessas nunca falham.",
 			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 14, 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Rendição e confiança",
+				conteudo:
+					"A vida pode ser cruel, mas Deus não é. A vida pode não ser justa, mas Deus é! Confiar não significa que entendo ou que aceito o que está acontecendo. Confiar não significa que eu goste do que está acontecendo ou que aquilo seja justo. Não significa que as experiências sejam justas ou que eu as mereço. Confiar não significa que eu acredito que Deus tenha sido a causa do que estou passando. Confiar significa que entendo que Deus me ama, e que Ele vai guiar-me através desta experiência. Significa que, apesar do que está acontecendo, ainda tenho confiança em Deus. Significa que descanso em Seu cuidado e amor, embora não entenda. Confiar significa que creio que Ele não me deseja nenhum mal. Ele é meu amigo.",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 15, 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Por que agimos desse modo?",
+				conteudo:
+					"Você ora tanto quanto Deus deseja? Tem reservado diariamente um tempo para meditar em Sua Palavra? Se a resposta é não, peça a Deus que lhe renove o entusiasmo de passar tempo com Ele. Restabeleça a paixão e o significado de estar na presença de Deus. Podemos orar sobre isso, agora? Pai Santo, ajuda-me a nunca ser descuidado em relação aos Teus caminhos ou à Tua Palavra. Capacita-me a não permitir que qualquer coisa relacionada à minha adoração a Ti torne-se sem vida ou se transforme num ritual sem profundidade. Mantém frescas e vivas em meu coração as disciplinas da oração, do louvor e da leitura da Tua Palavra. Em nome de Jesus, amém!",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 16 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Graça sem fronteiras",
+				conteudo:
+					"Naamã era comandante do exército da Síria, ele sofria de lepra. Na casa dele trabalhava uma garota israelita que fora capturada numa das incursões a Israel, quem sabe liderada pelo próprio Naamã. Essa garota se tornou agente de boas-novas e fez saber por meio da esposa de Naamã que ele poderia ser curado se fosse a Israel se encontrar com o profeta Eliseu.Naamã, como estava acostumado à pompa e circunstância, salas VIP e honrarias, exibição de poder, esperava uma cura ostentosa, uma ocasião de grande espetáculo. Mas ficou chocado pela recepção fria e pela atitude de indiferença do profeta. Eliseu não enviou senão uma receita para o tratamento: se quisesse sarar da lepra, Naamã teria que mergulhar sete vezes nas lamacentas águas do rio Jordão. O ego de Naamã despertou-lhe o patriotismo e ele argumentou que os rios de Damasco eram melhores. Mas, com a ajuda de seus assessores, o bom senso prevaleceu. Ele resolveu mergulhar sete vezes e o milagre aconteceu. Ele foi curado! Fisicamente, se tornou nova pessoa. A narrativa está ali por alguma razão, mostrando que o perdão, a salvação e a vida nova vêm pela graça de Deus, independentemente de riqueza, posição, nacionalidade, e está ao seu alcance agora. Não são necessárias peregrinações nem caravanas; ela está ao seu alcance agora. Onde você está: na sala, no quarto, no escritório, no ambiente de trabalho. “Aspergirei água pura sobre vocês e ficarão puros; Eu os purificarei de todas as suas impurezas” (Ez 36:25).",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 17 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Em todo tempo",
+				conteudo:
+					"É comum louvar a Deus quando o coração transborda de alegria e gratidão. É também comum procurá-Lo quando as coisas parecem escapar do controle e você sente que não tem mais forças para continuar resistindo aos furacões da vida. Não falo de furacões como o Katrina ou o Vilma, que arrasaram tudo, mas pelo menos deixaram a esperança da reconstrução. Refiro-me àqueles vendavais emocionais que levam embora até a vontade de continuar vivendo.O humanismo de nossos dias concentra a atenção do homem no próprio homem. “Busque a solução dentro de você”, afirma. “Tire a energia interior”, declara. A teologia bíblica é teocêntrica. Segundo ela, todos os caminhos e intenções humanas devem convergir para Deus. A Bíblia ensina que Deus está no Céu, mas quer estar na vida da criatura. Todos os dias e em todos os momentos.Abra o coração a Jesus. Abrace seus amados. Encoraje o fraco, conforte o triste e encare com segurança os desafios da vida. Ah! Não se esqueça: Do nascimento do sol até ao ocaso, louvado seja o nome do Senhor.",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 18 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Irmão Saulo",
+				conteudo:
+					"Fernando Pessoa disse: “O valor das coisas não está no tempo que elas duram, mas na intensidade com que acontecem. Por isso, existem momentos inesquecíveis, coisas inexplicáveis e pessoas incomparáveis.”Um momento inesquecível na vida de Paulo foi aquele em que ele recebeu a visita de Ananias, três dias depois de sua conversão. Ao receber a incumbência de conversar com Saulo, Ananias reagiu como qualquer um de nós reagiria. Tinha suas reservas. “É isso mesmo, Senhor, que Tu queres? Ele perseguiu o Teu povo e lançou homens e mulheres na prisão!”Saulo estava orando, enquanto aguardava a visita de alguém dentre os cristãos. De repente, sem esperar, sentiu uma mão tocando-lhe o ombro. Em seguida, ouviu palavras que jamais ouvira antes: “Irmão Saulo.”Como perseguidor, ele não merecia tais boas-vindas. Ele também não esperava ser abraçado pelas pessoas a quem perseguira. Portanto, ele nunca se esqueceu daquele gesto e daquelas palavras.	Ao tocar Paulo no ombro, Ananias estava dizendo: “Eu o aceito. Estou com você. Vai dar tudo certo. Não se preocupe.”Henry Drummond escreveu certa vez: “Quantos pródigos são mantidos fora do reino pelo caráter frio, desagradável daqueles que professam estar dentro.”O evangelho nos resgata do medo de ser rejeitados. Jesus foi mestre na arte da aceitação. Somos convidados a demonstrar essa aceitação no olhar, no tom de voz, no sorriso, no toque, no aperto de mão. Hoje, como extensão de Seu ministério, a igreja deve dar boas-vindas aos Saulos, Zaqueus, Madalenas e mendigos do caminho, pois Ananias seguiu o exemplo do Mestre.Com essas duas palavras e com seu gesto de aceitação, Ananias estava plantando no coração de Paulo a semente da graça de Deus. No fim de sua vida, Paulo escreveu: Essa afirmação é fiel e digna de toda aceitação: Cristo Jesus veio ao mundo para salvar os pecadores, dos quais eu sou o pior (1Tm 1:15).",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 19 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Salvo",
+				conteudo:
+					"Você não precisa viver preso às suas recordações passadas. Não há motivo para viver escondido nos tenebrosos túneis da culpa. Desabroche como a flor. Amanheça como o dia. Liberte-se como a borboleta do casulo. Viva. Na cruz do Calvário, pela misericórdia e pela fidelidade de Deus, o preço de sua culpa já foi pago. Hoje, “todos os confins da Terra” precisam ver o milagre que aconteceu na sua vida",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 20 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Um novo amanhã",
+				conteudo:
+					"Vivemos sob constante ameaça; nuvens de incerteza cobrem nosso horizonte. Abrir um pacote, viajar de avião, trem, ou ir ao centro da cidade se tornaram eventos estressantes. Precisamos de esperança, pois muitas perguntas invadem nossa mente: Quem controla o futuro? Terão os terroristas a última palavra? Existe uma perspectiva melhor? Sim, há alguém que controla o futuro e que planeja um final feliz para o mundo. Perto do fim do Seu ministério terrestre, Jesus Cristo prometeu aos discípulos: “Mandará o Filho do homem os Seus anjos, que ajuntarão do Seu reino todos os escândalos e os que praticaram a iniquidade” (Mt 13:41). Com essas palavras, Ele garantiu vir e destruir o mal, substituindo-o pela justiça. Ele tem o futuro em Suas mãos.",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 21 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Emoções e pensamentos negativos",
+				conteudo:
+					"Eu nunca realizei um estudo científico sobre o assunto, mas, pelo que já vi, creio que há mais pessoas no mundo que não se sentem amadas do que as que se sentem. Isso é trágico e explica por que há tantas pessoas dominadas por emoções e pensamentos negativos. Descobri que, toda vez que eu louvava a Deus, as vozes negativas em minha cabeça eram silenciadas. Se você fizer isso toda vez que pensamentos negativos vierem à sua mente, eles, por fim, desaparecerão. O louvor e a adoração são extremamente importantes para manter uma mente sã e limpa; eles silenciarão as vozes desencaminhantes, endireitarão seu caminho e o capacitarão melhor para ouvir Deus falar ao seu coração.Pratique isso no dia de hoje e ore comigo agora: Senhor, obrigado por curares as nossas feridas quando estamos com o coração partido. Tu nos levantas quando estamos fracos e vulneráveis. Eu Te louvo e Te dou graças porque me tens dado uma mente sã. Graças Te dou porque tenho a mente de Cristo. Ajuda-me a ser renovado no espírito do meu entendimento, a fim de dissipar as emoções e os pensamentos negativos. Neste dia, ponho veste de louvor, em vez de espírito angustiado, e Te glorifico como Senhor das minhas emoções e dos meus pensamentos. Em nome de Jesus, amém!",
+			},
+			{
+				categoria: "#autoajuda",
+				imagem: ansiedade,
+				data: "Set 22, 2023",
+				autorImagem: amiltonMenezes,
+				autor: "Amilton Menezes",
+				titulo: "Como resistir a tentação",
+				conteudo:
+					"Foi no deserto que teve lugar a grande luta entre o bem e o mal. Para Adão e Eva, a luta foi travada num jardim. Hoje, esse conflito segue acontecendo na sala de aula, no quarto, no local de trabalho, etc. Temos que pensar na tentação não apenas em termos de fazer o que não devemos, mas de esquecer nossa verdadeira identidade. A tentação diz: esqueça quem você é só por cinco minutos, um dia, um fim de semana. Não há nenhuma câmera oculta registrando o que ninguém vai descobrir. É só desta vez. Outros também podem fazer isso. Não vai prejudicar ninguém.",
+			},
 		],
 	}),
 	getters: {
