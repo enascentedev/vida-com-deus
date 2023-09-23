@@ -10,13 +10,22 @@ import olhosdeDeus from "@/assets/imagens/olhosdeDeus.jpg";
 import ansiedade from "@/assets/imagens/ansiedade.jpg";
 import aflicoes from "@/assets/imagens/aflicoes.jpg";
 
+const imagens = [
+	tempoRefletir,
+	escolhas,
+	amanhecer,
+	coracaoQuebrantado,
+	olhosdeDeus,
+	ansiedade,
+	aflicoes,
+];
 export const artigosStore = defineStore({
 	id: "artigos",
 	state: () => ({
 		artigos: [
 			{
 				categoria: "#autoajuda",
-				imagem: tempoRefletir,
+				imagem: getRandomImage(),
 				data: "Set 02, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -26,7 +35,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: escolhas,
+				imagem: getRandomImage(),
 				data: "Set 03, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -36,7 +45,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: amanhecer,
+				imagem: getRandomImage(),
 				data: "Set 04, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -46,7 +55,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: aflicoes,
+				imagem: getRandomImage(),
 				data: "Set 05, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -55,7 +64,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: coracaoQuebrantado,
+				imagem: getRandomImage(),
 				data: "Set 06, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -65,7 +74,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: olhosdeDeus,
+				imagem: getRandomImage(),
 				data: "Set 07, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -74,7 +83,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 08, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -84,7 +93,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 11, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -93,7 +102,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 12, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -103,7 +112,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 13, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -113,7 +122,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 14, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -123,7 +132,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 15, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -133,7 +142,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 16 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -143,7 +152,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 17 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -153,7 +162,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 18 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -163,7 +172,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 19 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -173,7 +182,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 20 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -183,7 +192,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 21 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -193,7 +202,7 @@ export const artigosStore = defineStore({
 			},
 			{
 				categoria: "#autoajuda",
-				imagem: ansiedade,
+				imagem: getRandomImage(),
 				data: "Set 22, 2023",
 				autorImagem: amiltonMenezes,
 				autor: "Amilton Menezes",
@@ -225,3 +234,7 @@ export const artigosStore = defineStore({
 		},
 	},
 });
+function getRandomImage() {
+	const randomIndex = Math.floor(Math.random() * imagens.length);
+	return imagens[randomIndex];
+}
