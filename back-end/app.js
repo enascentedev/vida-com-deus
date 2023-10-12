@@ -1,13 +1,11 @@
+require("dotenv").config();
 const express = require("express");
-const mongoose = require("mongoose"); // Novo
+const mongoose = require("mongoose");
 const rotaLivro = require("./rotas/livro");
 const rotaUsuario = require("./rotas/usuarios");
 const asyncErrors = require("express-async-errors");
 
-const token = jwt.sign({ _id: usuario._id }, process.env.JWT_SECRET);
-require("dotenv").config();
-
-// Conexão com MongoDB - Novo
+// Conexão com MongoDB
 mongoose
 	.connect(process.env.DB_URI, {
 		user: process.env.DB_USER,
@@ -28,7 +26,7 @@ const errorMiddleware = require("./helpers/errorMiddleware");
 app.use(errorMiddleware);
 
 app.use((err, req, res, next) => {
-	console.error(err); // Registrar o erro para fins de depuração
+	console.error(err);
 	res.status(500).json({ error: "Ocorreu um erro interno." });
 });
 

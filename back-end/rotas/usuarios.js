@@ -34,7 +34,10 @@ router.post("/login", async (req, res) => {
 		return res.status(401).send("Senha inválida");
 	}
 
-	const token = jwt.sign({ id: user._id }, "secreto", { expiresIn: "1d" });
+	const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+		expiresIn: "1d",
+	});
+
 	res.send({ token });
 });
 
