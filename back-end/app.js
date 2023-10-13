@@ -5,17 +5,6 @@ const rotaLivro = require("./rotas/livro");
 const rotaUsuario = require("./rotas/usuarios");
 const asyncErrors = require("express-async-errors");
 
-// Conexão com MongoDB
-mongoose
-	.connect(process.env.DB_URI, {
-		user: process.env.DB_USER,
-		pass: process.env.DB_PASSWORD,
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
-	.then(() => console.log("MongoDB connected"))
-	.catch((err) => console.log(err));
-
 const app = express();
 app.use(express.json());
 
@@ -29,6 +18,10 @@ app.use((err, req, res, next) => {
 	console.error(err);
 	res.status(500).json({ error: "Ocorreu um erro interno." });
 });
+
+//DB conexão
+const conn = require("./db/conn");
+conn();
 
 const port = 8000;
 
