@@ -13,6 +13,15 @@ As rotas são responsáveis por mapear URLs específicas para os controles corre
 
 As rotas permitem que você defina a estrutura da sua API, determinando como os recursos e as funcionalidades estão organizados nos URLs. Isso ajuda os desenvolvedores a entenderem como interagir com a API e a localizar rapidamente as funcionalidades de que precisam.
 
+Models:
+ Representa as entidades e a lógica de negócios da sua aplicação. Eles também são responsáveis pela interação com o banco de dados.
+
+ Helpers: 
+ Funções auxiliares e utilitários que podem ser usados em várias partes do aplicativo.
+
+ Middleware: 
+ São funções que têm acesso ao objeto de requisição (req), ao objeto de resposta (res) e à próxima função de middleware no ciclo de solicitação/resposta do aplicativo.
+
 Serviços:
 Os serviços representam as unidades funcionais ou os componentes principais da sua API. Cada serviço é responsável por uma funcionalidade específica do sistema e pode incluir a lógica de negócios, acesso a dados e outros processamentos relacionados.
 
