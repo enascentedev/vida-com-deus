@@ -1,8 +1,7 @@
 <template>
-	<div class="container">
+	<div id="container">
 		<h1>Life com Deus</h1>
-		<h2>Olá! Faça seu Login.</h2>
-		<hr />
+		<h2>Esqueceu sua senha?</h2>
 		<form class="formulario">
 			<label class="labelclass" for="email">
 				Usuário ou Email
@@ -51,7 +50,7 @@
 			<div v-if="status === 'success'" class="alert alert-success rounded-md">
 				<span>
 					<strong>Autenticado!</strong>
-					Usuário validado com sucesso, redirecionando...
+					Usuário registrado com sucesso, redirecionando...
 				</span>
 			</div>
 			<button
@@ -60,34 +59,19 @@
 				:disabled="status === 'success'"
 				accesskey="13"
 				@click.prevent="signin">
-				Entrar
+				Registar
 			</button>
-			<router-link class="recover-password" to="/register">
-				registre-se
-			</router-link>
 		</form>
-		<div class="suport">
-			<p>Problemas no acesso ou ainda não usa o life com Deus?</p>
-			<a href="##" target="_blank"> Fale com a nossa equipe </a>
-		</div>
-		<div class="copy">
-			<span>Life com Deus:</span>
-			<img
-				class="w-auto h-auto"
-				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0ZRdV_U9tw_Iz7_eO2R74xNCqmZk3ObmNQ&usqp=CAU"
-				alt="life com deus" />
-		</div>
 	</div>
 </template>
 
 <script>
-import { auth } from "@/stores/auth";
 export default {
-	name: "access",
+	name: "Register",
+
 	data() {
 		return {
 			status: "",
-
 			data: {
 				user: "",
 				password: "",
@@ -97,26 +81,20 @@ export default {
 
 	methods: {
 		async signin() {
-			console.log("Iniciando login");
-			const authenticationStore = auth();
-
-			// start
+			console.log("Iniciando registro");
 			this.$refs.button.disabled = true;
 			this.status = "info";
-			await new Promise((r) => setTimeout(r, 2000));
 
-			authenticationStore.login(this.data);
-
-			if (authenticationStore.isAuthenticated) {
+			try {
+				const response = await axios.post(
+					"http://localhost:8000/usuarios/register",
+					this.data
+				);
 				this.status = "success";
-				await new Promise((r) => setTimeout(r, 2000));
-
-				this.$router.push("/painel-sistema");
-
-				this.status = "";
-				this.$refs.button.disabled = false;
-			} else {
-				this.status = "error";
+				this.$router.push("/questionario");
+			} catch (error) {
+				console.error("Erro ao autenticar:", error);
+				this.status = "warning";
 				this.$refs.button.disabled = false;
 			}
 		},

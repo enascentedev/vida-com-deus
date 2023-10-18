@@ -58,9 +58,11 @@ export default {
 				>
 			</div>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
-				<a href="#" class="text-sm font-semibold leading-6 text-white"
-					>Área restrita<span aria-hidden="true">&rarr;</span></a
-				>
+				<router-link to="/login">
+					<a href="#" class="text-sm font-semibold leading-6 text-white"
+						>Área restrita<span aria-hidden="true">&rarr;</span></a
+					>
+				</router-link>
 			</div>
 		</nav>
 		<!-- Mobile menu, show/hide based on menu open state. -->
