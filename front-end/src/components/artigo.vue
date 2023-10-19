@@ -1,5 +1,4 @@
 <script>
-import { ref, reactive } from "vue";
 import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
 import amiltonMenezes from "@/assets/imagens/amiltonMenezes.jpg";
 import escolhas from "@/assets/imagens/escolhas.jpg";
@@ -7,7 +6,7 @@ import amanhecer from "@/assets/imagens/amanhecer.jpg";
 import { artigosStore } from "@/stores/storeArtigo";
 export default {
 	name: "Artigo",
-	setup() {
+	data() {
 		const store = artigosStore();
 		const artigos = store.listaDeArtigos;
 		return {
@@ -18,6 +17,15 @@ export default {
 			artigos,
 		};
 	},
+	methods: {
+		logout() {
+			// Remove o token do armazenamento local
+			localStorage.removeItem("authToken");
+
+			// Redireciona o usuário de volta para a página de login
+			this.$router.push("/login");
+		},
+	},
 };
 </script>
 
@@ -27,8 +35,16 @@ export default {
 			<div class="indicator">
 				<div class="indicator-item indicator-bottom">
 					<router-link to="/questionario">
-						<button class="btn btn-info">Acessar</button></router-link
+						<button>Acessar</button></router-link
 					>
+					<button
+						class="buttonclass"
+						ref="button"
+						:disabled="status === 'success'"
+						accesskey="13"
+						@click.prevent="logout">
+						Sair
+					</button>
 				</div>
 				<div class="card border">
 					<div class="card-body">

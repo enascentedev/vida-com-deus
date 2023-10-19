@@ -59,9 +59,10 @@
 				ref="button"
 				:disabled="status === 'success'"
 				accesskey="13"
-				@click.prevent="signin">
+				@click.prevent="login">
 				Entrar
 			</button>
+
 			<router-link class="recover-password" to="/register">
 				registre-se
 			</router-link>
@@ -81,7 +82,7 @@
 </template>
 
 <script>
-import { auth } from "@/stores/auth";
+import axios from "axios";
 export default {
 	name: "access",
 	data() {
@@ -96,29 +97,33 @@ export default {
 	},
 
 	methods: {
-		async signin() {
-			console.log("Iniciando login");
-			const authenticationStore = auth();
+		async login() {
+			try {
+				// Efetua a requisição ao endpoint de login
+				const response = await axios.post(
+					"http://localhost:8000/usuarios/login",
+					this.data
+				);
 
-			// start
-			this.$refs.button.disabled = true;
-			this.status = "info";
-			await new Promise((r) => setTimeout(r, 2000));
+				// Salva o token no armazenamento local
+				const token = response.data.token;
+				localStorage.setItem("authToken", token);
 
-			authenticationStore.login(this.data);
-
-			if (authenticationStore.isAuthenticated) {
+				// Atualiza o status e redireciona para a página principal ou dashboard
 				this.status = "success";
-				await new Promise((r) => setTimeout(r, 2000));
-
-				this.$router.push("/painel-sistema");
-
-				this.status = "";
-				this.$refs.button.disabled = false;
-			} else {
+				this.$router.push("/artigo-semanal"); // Redireciona para a rota desejada após o login
+			} catch (error) {
+				// Em caso de erro, exibe uma mensagem de erro
+				console.error("Erro ao fazer login:", error);
 				this.status = "error";
-				this.$refs.button.disabled = false;
 			}
+		},
+		logout() {
+			// Remove o token do armazenamento local
+			localStorage.removeItem("authToken");
+
+			// Redireciona o usuário de volta para a página de login
+			this.$router.push("/login");
 		},
 	},
 };
