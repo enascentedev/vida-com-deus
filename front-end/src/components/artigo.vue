@@ -23,7 +23,7 @@ export default {
 			localStorage.removeItem("authToken");
 
 			// Redireciona o usuário de volta para a página de login
-			this.$router.push("/login");
+			this.$router.push("/");
 		},
 	},
 };
