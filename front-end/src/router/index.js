@@ -28,18 +28,42 @@ const router = createRouter({
 			path: "/questionario",
 			name: "questions",
 			component: Questions,
+			meta: {
+				requiresAuth: true,
+			},
 		},
 		{
 			path: "/artigo-semanal",
 			name: "ArtigoView",
 			component: ArtigoView,
+			meta: {
+				requiresAuth: true,
+			},
 		},
 		{
 			path: "/criar-artigo",
 			name: "CreateArquivo",
 			component: CreateArquivo,
+			meta: {
+				requiresAuth: true,
+			},
 		},
 	],
 });
 
+router.beforeEach((to, from, next) => {
+	// Obtém o token atual do localStorage
+	const currentToken = localStorage.getItem("authToken");
+
+	if (to.matched.some((route) => route.meta.requiresAuth)) {
+		if (currentToken) {
+			next();
+		} else {
+			console.log("O usuário não está autenticado");
+			next("/questionario");
+		}
+	} else {
+		next();
+	}
+});
 export default router;
