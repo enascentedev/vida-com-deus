@@ -43,7 +43,7 @@
 						</div>
 					</div>
 					<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-						<a href="#">
+						<a href="/artigo-semanal">
 							<span class="absolute inset-0"></span>
 							{{ artigo.titulo }}
 						</a>
