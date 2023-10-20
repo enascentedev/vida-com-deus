@@ -111,7 +111,7 @@ export default {
 
 				// Atualiza o status e redireciona para a página principal ou dashboard
 				this.status = "success";
-				this.$router.push("/artigo-semanal"); // Redireciona para a rota desejada após o login
+				this.$router.push("/home"); // Redireciona para a rota desejada após o login
 			} catch (error) {
 				// Em caso de erro, exibe uma mensagem de erro
 				console.error("Erro ao fazer login:", error);
