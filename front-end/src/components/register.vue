@@ -1,7 +1,11 @@
 <template>
-	<div id="container">
-		<h1>Life com Deus</h1>
-		<h2>Esqueceu sua senha?</h2>
+	<div class="container">
+		<img
+			class="w-20 h-20 mx-auto"
+			src="https://cdn-icons-png.flaticon.com/512/72/72648.png"
+			alt="life com deus" />
+
+		<h2>Crie seu usuário</h2>
 		<form class="formulario">
 			<label class="labelclass" for="email">
 				Usuário ou Email
@@ -61,6 +65,7 @@
 				@click.prevent="signin">
 				Registar
 			</button>
+			<router-link class="recover-password" to="/login"> Logar </router-link>
 		</form>
 	</div>
 </template>

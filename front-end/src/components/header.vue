@@ -1,8 +1,28 @@
 <script>
-import { ref, reactive } from "vue";
+import { StoreUser } from "@/stores/user";
 export default {
 	name: "Header",
-	setup() {},
+	data() {
+		return {
+			store: null,
+			authToken: null,
+		};
+	},
+	async mounted() {
+		// store
+		this.storelogout = StoreUser();
+	},
+	methods: {
+		logout() {
+			if (this.store) {
+				this.storelogout.logout();
+			}
+			localStorage.removeItem("authToken");
+
+			// Redireciona o usuário de volta para a página de login
+			this.$router.push("/login");
+		},
+	},
 };
 </script>
 
@@ -66,7 +86,11 @@ export default {
 			</div>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
 				<router-link to="/login">
-					<a href="#" class="text-sm font-semibold leading-6 text-white"
+					<!-- v-show="this.storelogout.authToken" -->
+					<a
+						href="#"
+						class="text-sm font-semibold leading-6 text-white"
+						@click="logout()"
 						>Sair<span aria-hidden="true">&rarr;</span></a
 					>
 				</router-link>

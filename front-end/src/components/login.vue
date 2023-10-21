@@ -1,6 +1,10 @@
 <template>
 	<div class="container">
-		<h1>Life com Deus</h1>
+		<img
+			class="w-auto h-auto mx-auto"
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0ZRdV_U9tw_Iz7_eO2R74xNCqmZk3ObmNQ&usqp=CAU"
+			alt="life com deus" />
+		<!-- <h1>Life com Deus</h1> -->
 		<h2>Olá! Faça seu Login.</h2>
 		<hr />
 		<form class="formulario">
@@ -73,16 +77,11 @@
 		</div>
 		<div class="copy">
 			<span>Life com Deus:</span>
-			<img
-				class="w-auto h-auto"
-				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0ZRdV_U9tw_Iz7_eO2R74xNCqmZk3ObmNQ&usqp=CAU"
-				alt="life com deus" />
 		</div>
 	</div>
 </template>
 
 <script>
-import axios from "axios";
 import { StoreUser } from "@/stores/user";
 export default {
 	name: "access",
@@ -136,7 +135,7 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .container {
-	@apply py-20 px-4 lg:px-12 xl:px-12 h-screen flex flex-col;
+	@apply py-5 px-4 lg:px-12 xl:px-12 h-screen flex flex-col;
 
 	hr {
 		@apply my-4 block;

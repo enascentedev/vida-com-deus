@@ -7,7 +7,7 @@ export const StoreUser = defineStore({
 	state: () => ({
 		user: null,
 		response: null,
-		authToken: null,
+		authToken: false,
 		data: {},
 	}),
 	actions: {
