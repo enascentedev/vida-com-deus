@@ -55,7 +55,6 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
 import { artigosStore } from "@/stores/storeArtigo";
 
 export default {

@@ -1,11 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
-import Questions from "@/views/questions.vue";
-import ArtigoView from "@/views/ArtigoView.vue";
-import CreateArquivo from "@/views/AdicionarArtigoView.vue";
-import loginView from "@/views/loginView.vue";
-import registerView from "@/views/registerView.vue";
-import forgottenView from "@/views/forgottenView.vue";
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,32 +6,31 @@ const router = createRouter({
 		{
 			path: "/lembrar-senha",
 			name: "forgottenName",
-			component: forgottenView,
+			component: () => import("@/views/forgottenView.vue"),
 		},
 		{
 			path: "/register",
 			name: "register",
-			component: registerView,
+			component: () => import("@/views/registerView.vue"),
 		},
 		{
 			path: "/login",
 			name: "login",
-			component: loginView,
+			component: () => import("@/views/loginView.vue"),
 		},
 		{
 			path: "/",
-
-			component: HomeView,
+			component: () => import("@/views/HomeView.vue"),
 		},
 		{
 			path: "/home",
 			name: "home",
-			component: HomeView,
+			component: () => import("@/views/HomeView.vue"),
 		},
 		{
 			path: "/questionario",
 			name: "questions",
-			component: Questions,
+			component: () => import("@/views/questions.vue"),
 			meta: {
 				requiresAuth: true,
 			},
@@ -46,7 +38,7 @@ const router = createRouter({
 		{
 			path: "/artigo-semanal",
 			name: "ArtigoView",
-			component: ArtigoView,
+			component: () => import("@/views/ArtigoView.vue"),
 			meta: {
 				requiresAuth: true,
 			},
@@ -54,7 +46,7 @@ const router = createRouter({
 		{
 			path: "/criar-artigo",
 			name: "CreateArquivo",
-			component: CreateArquivo,
+			component: () => import("@/views/AdicionarArtigoView.vue"),
 			meta: {
 				requiresAuth: true,
 			},
@@ -77,4 +69,5 @@ router.beforeEach((to, from, next) => {
 		next();
 	}
 });
+
 export default router;

@@ -70,7 +70,7 @@
 			<router-link class="recover-password" to="/register">
 				registre-se
 			</router-link>
-			<router-link class="recover-password" to="/register">
+			<router-link class="recover-password" to="/lembrar-senha">
 				lembrar senha
 			</router-link>
 		</form>
@@ -138,7 +138,7 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .container {
-	@apply py-5 px-4 lg:px-12 xl:px-12 h-screen flex flex-col;
+	@apply py-5 px-4  h-screen flex flex-col;
 
 	hr {
 		@apply my-4 block;
@@ -152,16 +152,16 @@ export default {
 	}
 
 	.formulario {
-		@apply flex flex-col mx-auto xl:max-w-2xl sm:max-w-sm;
+		@apply flex flex-col mx-10;
 		.labelclass {
-			@apply label flex flex-col items-start relative px-0;
+			@apply label flex flex-col items-start relative;
 
 			.input-icon {
 				@apply absolute top-12 left-5 text-primary focus:ring-transparent focus:border-primary input-bordered input;
 			}
 
 			.inputGeral {
-				@apply w-full pl-11 focus:ring-transparent focus:border-primary input-bordered input;
+				@apply w-full focus:ring-transparent focus:border-primary input-bordered input;
 			}
 		}
 

@@ -68,6 +68,11 @@ export default {
 						>Artigo semanal</a
 					></router-link
 				>
+				<router-link to="/home">
+					<a href="#" class="text-sm font-semibold leading-6 text-white"
+						>Home</a
+					></router-link
+				>
 				<router-link to="/criar-artigo">
 					<a href="#" class="text-sm font-semibold leading-6 text-white"
 						>Criar artigo

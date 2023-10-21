@@ -109,7 +109,7 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .container {
-	@apply py-20 px-4 lg:px-12 xl:px-12 h-screen flex flex-col;
+	@apply py-20 px-4  h-screen flex flex-col;
 
 	hr {
 		@apply my-4 block;
@@ -123,16 +123,16 @@ export default {
 	}
 
 	.formulario {
-		@apply flex flex-col mx-auto xl:max-w-2xl sm:max-w-sm;
+		@apply flex flex-col mx-10;
 		.labelclass {
-			@apply label flex flex-col items-start relative px-0;
+			@apply label flex flex-col items-start relative;
 
 			.input-icon {
 				@apply absolute top-12 left-5 text-primary focus:ring-transparent focus:border-primary input-bordered input;
 			}
 
 			.inputGeral {
-				@apply w-full pl-11 focus:ring-transparent focus:border-primary input-bordered input;
+				@apply w-full focus:ring-transparent focus:border-primary input-bordered input;
 			}
 		}
 
@@ -140,7 +140,7 @@ export default {
 			@apply mt-6  lg:w-full bg-blue-500 btn-outline btn-primary hover:bg-primary  text-base-content btn;
 		}
 		.recover-password {
-			@apply my-4 text-right block underline text-primary;
+			@apply my-1 text-right block underline text-primary;
 		}
 
 		.alert-load {
@@ -155,7 +155,7 @@ export default {
 	}
 
 	.suport {
-		@apply text-center mt-7 text-base-content;
+		@apply text-center mt-3 text-base-content;
 
 		a {
 			@apply block mt-1 text-primary-focus underline font-semibold;
