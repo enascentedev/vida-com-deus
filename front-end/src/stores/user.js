@@ -22,7 +22,6 @@ export const StoreUser = defineStore({
 					data
 				);
 				const token = response.data.token;
-				console.log(response);
 				localStorage.setItem("authToken", token);
 				if (response.data && response.data.token) {
 					return token;

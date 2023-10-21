@@ -10,21 +10,25 @@ export default {
 	data() {
 		const store = artigosStore();
 		const artigos = store.listaDeArtigos;
+
 		return {
 			tempoRefletir,
 			amiltonMenezes,
 			escolhas,
 			amanhecer,
 			artigos,
+			store: null,
 		};
 	},
 	async mounted() {
 		// store
-		this.store = StoreUser();
+		this.storelogout = StoreUser();
 	},
 	methods: {
 		logout() {
-			// Remove o token do armazenamento local
+			if (this.store) {
+				this.storelogout.logout();
+			}
 			localStorage.removeItem("authToken");
 
 			// Redireciona o usuário de volta para a página de login

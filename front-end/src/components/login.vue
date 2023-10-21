@@ -119,7 +119,6 @@ export default {
 
 			// action
 			const response = await this.store.login(this.data);
-			console.log(response);
 
 			// check
 			if (this.response) {
