@@ -5,10 +5,16 @@ import ArtigoView from "@/views/ArtigoView.vue";
 import CreateArquivo from "@/views/AdicionarArtigoView.vue";
 import loginView from "@/views/loginView.vue";
 import registerView from "@/views/registerView.vue";
+import forgottenView from "@/views/forgottenView.vue";
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
+		{
+			path: "/lembrar-senha",
+			name: "forgottenName",
+			component: forgottenView,
+		},
 		{
 			path: "/register",
 			name: "register",
@@ -65,7 +71,7 @@ router.beforeEach((to, from, next) => {
 			next();
 		} else {
 			console.log("O usuário não está autenticado");
-			next("/questionario");
+			next("/login");
 		}
 	} else {
 		next();

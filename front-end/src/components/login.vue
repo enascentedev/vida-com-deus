@@ -70,6 +70,9 @@
 			<router-link class="recover-password" to="/register">
 				registre-se
 			</router-link>
+			<router-link class="recover-password" to="/register">
+				lembrar senha
+			</router-link>
 		</form>
 		<div class="suport">
 			<p>Problemas no acesso ou ainda não usa o life com Deus?</p>
@@ -166,7 +169,7 @@ export default {
 			@apply mt-6  lg:w-full bg-blue-500 btn-outline btn-primary hover:bg-primary  text-base-content btn;
 		}
 		.recover-password {
-			@apply my-4 text-right block underline text-primary;
+			@apply my-1 text-right block underline text-primary;
 		}
 
 		.alert-load {
@@ -181,7 +184,7 @@ export default {
 	}
 
 	.suport {
-		@apply text-center mt-7 text-base-content;
+		@apply text-center mt-3 text-base-content;
 
 		a {
 			@apply block mt-1 text-primary-focus underline font-semibold;

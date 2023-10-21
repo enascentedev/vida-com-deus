@@ -1,7 +1,7 @@
 <template>
-	<div id="container">
-		<h1>WebPrice</h1>
-		<h2>Esqueceu sua senha?</h2>
+	<div class="container">
+		<h1>life com deus</h1>
+		<h2>Lembrar sua senha?</h2>
 		<form class="formulario">
 			<hr />
 			<label class="labelclass" for="email">
@@ -36,34 +36,23 @@
 				<span>
 					<strong>Usuário ou e-mail inválido!</strong>
 
-					<a
-						class="contact"
-						href="https://webprice.com.br/#contato"
-						target="_blank">
-						contato@contato
-					</a>
+					<a class="contact" href="#" target="_blank"> contato@contato </a>
 				</span>
 			</div>
 			<div class="remember-password">
-				<router-link to="/login/acesso">
+				<router-link to="/login">
 					<font-awesome-icon :icon="['fas', 'arrow-left']" />
 					Voltar para o login
 				</router-link>
-				<button @click.prevent="reset" :disabled="status === 'warning'">
-					Lembrar senha
-				</button>
+				<button @click="reset">Lembrar senha</button>
 			</div>
 		</form>
-		<ComponentLoginSuport />
 	</div>
 </template>
 
 <script>
-import ComponentLoginSuport from "@/components/login/suport.vue";
-
 export default {
-	name: "ComponentLoginForgotten",
-	components: { ComponentLoginSuport },
+	name: "Forgotten",
 
 	data() {
 		return {
@@ -75,24 +64,83 @@ export default {
 	},
 
 	methods: {
-		async reset() {
-			this.status = "info";
-			await new Promise((r) => setTimeout(r, 2000));
-			if (
-				!this.data.user ||
-				this.data.user.length < 4 ||
-				this.data.user.length > 40
-			)
-				if (Math.random() > 0.5) {
-					this.status = "error";
-					return null;
-				}
-			this.status = "warning";
-			this.$refs.button.disabled = true; // Desabilita o botão
-			await new Promise((r) => setTimeout(r, 2000));
-			this.$router.push("/login/resetar-senha");
+		reset() {
+			console.log("enviar senha");
+			window.alert("senha enviada");
+			this.$router.push("/login");
 		},
 	},
 };
 </script>
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.container {
+	@apply py-5 px-4 lg:px-12 xl:px-12 h-screen flex flex-col;
+
+	hr {
+		@apply my-4 block;
+	}
+	h1 {
+		@apply text-6xl text-primary font-bold text-center;
+	}
+
+	h2 {
+		@apply mt-2 text-center text-2xl  tracking-tight;
+	}
+
+	.formulario {
+		@apply flex flex-col mx-auto xl:max-w-2xl sm:max-w-sm;
+		.labelclass {
+			@apply label flex flex-col items-start relative px-0;
+
+			.input-icon {
+				@apply absolute top-12 left-5 text-primary focus:ring-transparent focus:border-primary input-bordered input;
+			}
+
+			.inputGeral {
+				@apply w-full pl-11 focus:ring-transparent focus:border-primary input-bordered input;
+			}
+		}
+
+		.buttonclass {
+			@apply mt-6  lg:w-full bg-blue-500 btn-outline btn-primary hover:bg-primary  text-base-content btn;
+		}
+		.recover-password {
+			@apply my-4 text-right block underline text-primary;
+		}
+
+		.alert-load {
+			@apply flex gap-1 items-end;
+		}
+
+		.alert {
+			span {
+				@apply max-w-[45ch];
+			}
+		}
+	}
+
+	.suport {
+		@apply text-center mt-7 text-base-content;
+
+		a {
+			@apply block mt-1 text-primary-focus underline font-semibold;
+		}
+	}
+
+	.copy {
+		@apply flex items-center justify-center gap-2 flex-col mt-6;
+
+		span {
+			@apply text-xs;
+		}
+
+		img {
+			@apply max-w-[142px];
+		}
+	}
+	/* link com svg voltar login style exclusivo register */
+}
+.alert {
+	@apply rounded-md;
+}
+</style>

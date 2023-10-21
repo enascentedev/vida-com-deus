@@ -3,7 +3,7 @@ import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
 import amiltonMenezes from "@/assets/imagens/amiltonMenezes.jpg";
 import escolhas from "@/assets/imagens/escolhas.jpg";
 import amanhecer from "@/assets/imagens/amanhecer.jpg";
-import { StoreUser } from "@/stores/user";
+
 import { artigosStore } from "@/stores/storeArtigo";
 export default {
 	name: "Artigo",
@@ -20,21 +20,6 @@ export default {
 			store: null,
 		};
 	},
-	async mounted() {
-		// store
-		this.storelogout = StoreUser();
-	},
-	methods: {
-		logout() {
-			if (this.store) {
-				this.storelogout.logout();
-			}
-			localStorage.removeItem("authToken");
-
-			// Redireciona o usuário de volta para a página de login
-			this.$router.push("/login");
-		},
-	},
 };
 </script>
 
@@ -46,14 +31,6 @@ export default {
 					<router-link to="/questionario">
 						<button>Acessar</button></router-link
 					>
-					<button
-						class="buttonclass"
-						ref="button"
-						:disabled="status === 'success'"
-						accesskey="13"
-						@click.prevent="logout">
-						Sair
-					</button>
 				</div>
 				<div class="card border">
 					<div class="card-body">
