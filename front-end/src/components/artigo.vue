@@ -3,6 +3,7 @@ import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
 import amiltonMenezes from "@/assets/imagens/amiltonMenezes.jpg";
 import escolhas from "@/assets/imagens/escolhas.jpg";
 import amanhecer from "@/assets/imagens/amanhecer.jpg";
+import { StoreUser } from "@/stores/user";
 import { artigosStore } from "@/stores/storeArtigo";
 export default {
 	name: "Artigo",
@@ -17,13 +18,17 @@ export default {
 			artigos,
 		};
 	},
+	async mounted() {
+		// store
+		this.store = StoreUser();
+	},
 	methods: {
 		logout() {
 			// Remove o token do armazenamento local
 			localStorage.removeItem("authToken");
 
 			// Redireciona o usuário de volta para a página de login
-			this.$router.push("/");
+			this.$router.push("/login");
 		},
 	},
 };

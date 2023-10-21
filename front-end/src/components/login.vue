@@ -59,7 +59,7 @@
 				ref="button"
 				:disabled="status === 'success'"
 				accesskey="13"
-				@click.prevent="login">
+				@click.prevent="loginUser">
 				Entrar
 			</button>
 
@@ -83,47 +83,54 @@
 
 <script>
 import axios from "axios";
+import { StoreUser } from "@/stores/user";
 export default {
 	name: "access",
 	data() {
 		return {
 			status: "",
-
 			data: {
 				user: "",
 				password: "",
 			},
 		};
 	},
+	async mounted() {
+		// store
+		this.store = StoreUser();
+	},
 
 	methods: {
-		async login() {
-			try {
-				// Efetua a requisição ao endpoint de login
-				const response = await axios.post(
-					"http://localhost:8000/usuarios/login",
-					this.data
-				);
+		async loginUser() {
+			// status
+			this.status = "info";
 
-				// Salva o token no armazenamento local
-				const token = response.data.token;
-				localStorage.setItem("authToken", token);
+			this.response = await this.store.login(this.data);
 
-				// Atualiza o status e redireciona para a página principal ou dashboard
+			// data
+			this.data.user = this.data.user.trim();
+			this.data.password = this.data.password.trim();
+
+			// check
+			if (this.data.user == "" || this.data.password == "") {
+				this.status = "warning";
+				return;
+			}
+
+			// action
+			const response = await this.store.login(this.data);
+			console.log(response);
+
+			// check
+			if (this.response) {
 				this.status = "success";
-				this.$router.push("/home"); // Redireciona para a rota desejada após o login
-			} catch (error) {
-				// Em caso de erro, exibe uma mensagem de erro
-				console.error("Erro ao fazer login:", error);
+				setTimeout(() => {
+					this.$router.push("/artigo-semanal");
+				}, 2000);
+			} else {
+				// status
 				this.status = "error";
 			}
-		},
-		logout() {
-			// Remove o token do armazenamento local
-			localStorage.removeItem("authToken");
-
-			// Redireciona o usuário de volta para a página de login
-			this.$router.push("/login");
 		},
 	},
 };
