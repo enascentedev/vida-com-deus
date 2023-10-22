@@ -9,7 +9,7 @@ npm run api
 # ESTRUTURA
 
 back-end
-|-- contraladores/
+|-- controladores/
 |-- db/
 | |-- conn.js
 | |-- migrateArtigos.js

@@ -1,21 +1,19 @@
 //artigos.js
 
 //imports
+const authenticate = require("../helpers/authMiddleware"); // Importe o middleware
 const express = require("express");
 const router = express.Router();
+const Artigo = require("../models/artigos.js");
+const artigoController = require("../controladores/artigos.js");
 
 const mongoose = require("mongoose");
-const Artigo = mongoose.model("Artigo");
 
 // Rota para obter todos os artigos
-router.get("/artigos", async (req, res) => {
-	try {
-		const artigos = await Artigo.find();
-		res.json(artigos);
-	} catch (error) {
-		res.status(500).json({ message: "Algo deu errado." });
-	}
-});
+router.get("/", artigoController.getTodosArtigos);
+
+// Rota para buscar um artigo por ID
+router.get("/:id", artigoController.getArtigoPorId);
 
 // export
 module.exports = router;

@@ -6,7 +6,7 @@ const {
 	postLivro,
 	patchLivro,
 	deleteLivro,
-} = require("../contraladores/livro");
+} = require("../controladores/livro");
 const router = express.Router();
 
 router.get("/", getLivros);

@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const rotaLivro = require("./rotas/livro");
 const rotaUsuario = require("./rotas/usuarios");
+const rotaArtigos = require("./rotas/artigos");
 const asyncErrors = require("express-async-errors");
 const cors = require("cors");
 
@@ -20,6 +21,7 @@ app.use(
 
 app.use("/livros", rotaLivro);
 app.use("/usuarios", rotaUsuario);
+app.use("/artigos", rotaArtigos);
 
 const errorMiddleware = require("./helpers/errorMiddleware");
 app.use(errorMiddleware);
