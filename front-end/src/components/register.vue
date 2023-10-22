@@ -11,7 +11,7 @@
 				Usuário ou Email
 				<input
 					id="email"
-					v-model="data.user"
+					v-model="data.username"
 					name="email"
 					type="email"
 					class="inputGeral"
@@ -28,7 +28,6 @@
 					required />
 			</label>
 			<div v-if="status === 'info'" class="alert alert-info rounded-md">
-				<font-awesome-icon :icon="['fasr', 'circle-exclamation']" />
 				<div class="alert-load">
 					<strong>Aguarde!</strong>
 					Carregando
@@ -36,7 +35,6 @@
 				</div>
 			</div>
 			<div v-if="status === 'warning'" class="alert alert-warning rounded-md">
-				<font-awesome-icon :icon="['fasr', 'triangle-exclamation']" />
 				<span>
 					<strong>Erro!</strong>
 					Digite corretamente usuário e senha!
@@ -79,16 +77,15 @@ export default {
 		return {
 			status: "",
 			data: {
-				user: "",
+				username: "",
 				password: "",
 			},
 		};
 	},
 
 	methods: {
-		async signin() {
+		async signin(data) {
 			console.log("Iniciando registro");
-			this.$refs.button.disabled = true;
 			this.status = "info";
 
 			try {
@@ -96,12 +93,13 @@ export default {
 					"http://localhost:8000/usuarios/register",
 					this.data
 				);
+				setTimeout(() => {
+					this.$router.push("/questionario");
+				}, "5000");
 				this.status = "success";
-				this.$router.push("/questionario");
 			} catch (error) {
 				console.error("Erro ao autenticar:", error);
 				this.status = "warning";
-				this.$refs.button.disabled = false;
 			}
 		},
 	},

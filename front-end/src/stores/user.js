@@ -16,7 +16,6 @@ export const StoreUser = defineStore({
 		//request para end-point
 		async login(data) {
 			try {
-				console.log(data);
 				const response = await axios.post(
 					"http://localhost:8000/usuarios/login",
 					data
