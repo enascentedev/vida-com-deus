@@ -1,11 +1,8 @@
 const fs = require("fs");
 const mongoose = require("mongoose");
-
+require("dotenv").config({ path: "../.env" });
 // Importando a função de conexão
-const connectToDb = require("./conn");
-
-// Conectar ao MongoDB usando a função importada
-connectToDb();
+const connectToDb = require("./conn.js");
 
 // Definir o esquema
 const Artigo = mongoose.model(
@@ -23,23 +20,29 @@ const Artigo = mongoose.model(
 	})
 );
 
-// Ler o arquivo JSON e importar os dados
-fs.readFile("../artigos.json", "utf8", async (err, data) => {
-	if (err) {
-		console.error("Erro ao ler o arquivo", err);
-		return;
-	}
+async function mainApp() {
+	await connectToDb();
 
-	const json = JSON.parse(data);
-	const artigos = json.artigos;
+	// Ler o arquivo JSON e importar os dados
+	fs.readFile("../artigos.json", "utf8", async (err, data) => {
+		if (err) {
+			console.error("Erro ao ler o arquivo", err);
+			return;
+		}
 
-	for (const artigo of artigos) {
-		const novoArtigo = new Artigo(artigo);
-		await novoArtigo.save();
-	}
+		const json = JSON.parse(data);
+		const artigos = json.artigos;
 
-	console.log("Dados importados com sucesso");
+		for (const artigo of artigos) {
+			const novoArtigo = new Artigo(artigo);
+			await novoArtigo.save();
+		}
 
-	// Encerrar a conexão após a migração
-	mongoose.connection.close();
-});
+		console.log("Dados importados com sucesso");
+
+		// Encerrar a conexão após a migração
+		mongoose.connection.close();
+	});
+}
+
+mainApp();
