@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import Cookies from "js-cookie";
+
 import axios from "axios";
 
 export const StoreUser = defineStore({
