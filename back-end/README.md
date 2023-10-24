@@ -39,3 +39,40 @@ back-end/
 |-- package.json
 |-- README.md
 |-- teoria.txt
+
+# Documentação de Branchs
+
+## Visão Geral
+
+Este documento fornece uma visão geral das branchs do projeto, destacando suas respectivas funcionalidades e responsabilidades.
+
+## Padrão de Nomenclatura de Branchs
+
+- `feature/<nome-da-funcionalidade>`: Utilizada para desenvolvimento de novas funcionalidades.
+
+## Branchs
+
+### feature/db-data
+
+**Objetivo**: Implementação e ajustes relacionados ao banco de dados.
+
+**Principais mudanças**:
+
+- Implementação da conexão com o banco de dados.
+- Criação da nova rota /artigos
+- Implementação de migrações.
+- criando instância axios para requisições
+- Criação da nova rota /artigos
+- Consumindo end-point com store no front-end
+
+### feature/back-arquiteturaApi
+
+**Objetivo**: Refatoração da estrutura de pastas da API e organização das funções.
+
+**Plano**:
+
+- Dividir responsabilidades da rota /artigos (criar artigos.js dentro de serviços)
+- Analisar criação de diretório para Middleware
+- Revisar tratamento de erros
+
+**Principais mudanças**:
