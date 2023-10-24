@@ -23,6 +23,9 @@ const Artigo = mongoose.model(
 async function mainApp() {
 	await connectToDb();
 
+	// Limpar todos os registros da coleção
+	await Artigo.deleteMany({});
+
 	// Ler o arquivo JSON e importar os dados
 	fs.readFile("../artigos.json", "utf8", async (err, data) => {
 		if (err) {
