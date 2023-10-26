@@ -5,25 +5,20 @@ const rotaLivro = require("./rotas/livro");
 const rotaUsuario = require("./rotas/usuarios");
 const rotaArtigos = require("./rotas/artigos");
 const asyncErrors = require("express-async-errors");
-const cors = require("cors");
+
+const corsMiddleware = require("./middlewares/corsMiddleware");
 
 const app = express();
 app.use(express.json());
 
-app.use(
-	cors({
-		origin: "http://localhost:5173",
-		methods: ["GET", "POST", "PUT", "DELETE"],
-		allowedHeaders: ["Content-Type", "Authorization"],
-		credentials: true,
-	})
-);
+// Aplica o middleware CORS
+corsMiddleware(app);
 
 app.use("/livros", rotaLivro);
 app.use("/usuarios", rotaUsuario);
 app.use("/artigos", rotaArtigos);
 
-const errorMiddleware = require("./helpers/errorMiddleware");
+const errorMiddleware = require("./middlewares/errorMiddleware");
 app.use(errorMiddleware);
 
 app.use((err, req, res, next) => {

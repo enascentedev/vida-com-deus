@@ -19,7 +19,7 @@ back-end/
 |-- db/
 | |-- conn.js
 | |-- migrateArtigos.js
-|-- helpers/
+|-- middlewares/
 | |-- authMiddleware.js
 | |-- errorMiddleware.js
 |-- models/
@@ -71,8 +71,8 @@ Este documento fornece uma visão geral das branchs do projeto, destacando suas 
 
 **Plano**:
 
-- Dividir responsabilidades da rota /artigos (criar artigos.js dentro de serviços)
-- Analisar criação de diretório para Middleware
+- Dividir responsabilidades da rota /artigos (criar artigos.js dentro de serviços) ok
+- Analisar criação de diretório para Middleware ok
 - Revisar tratamento de erros
 
 **Principais mudanças**:

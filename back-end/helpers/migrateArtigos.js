@@ -2,7 +2,7 @@ const fs = require("fs");
 const mongoose = require("mongoose");
 require("dotenv").config({ path: "../.env" });
 // Importando a função de conexão
-const connectToDb = require("./conn.js");
+const connectToDb = require("../db/conn.js");
 
 // Definir o esquema
 const Artigo = mongoose.model(

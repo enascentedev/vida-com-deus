@@ -1,5 +1,5 @@
 const express = require("express");
-const authenticate = require("../helpers/authMiddleware"); // Importe o middleware
+const authenticate = require("../middlewares/authMiddleware"); // Importe o middleware
 const {
 	getLivros,
 	getLivro,

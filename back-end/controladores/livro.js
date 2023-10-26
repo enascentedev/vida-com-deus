@@ -1,3 +1,4 @@
+//import
 const asyncErrors = require("express-async-errors");
 const {
 	getTodosLivros,
@@ -7,11 +8,13 @@ const {
 	deletaLivroPorId,
 } = require("../servicos/livro");
 
+// Controlador para buscar todos os livros
 async function getLivros(req, res) {
 	const livros = await getTodosLivros();
 	res.send(livros);
 }
 
+// Controlador para buscar um livro por ID
 async function getLivro(req, res) {
 	const id = req.params.id;
 	const livro = await getLivroPorId(id);
@@ -38,6 +41,7 @@ async function deleteLivro(req, res) {
 	res.send("item deletado com sucesso");
 }
 
+//export
 module.exports = {
 	getLivros,
 	getLivro,

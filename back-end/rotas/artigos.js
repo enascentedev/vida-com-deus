@@ -1,19 +1,21 @@
 //artigos.js
 
 //imports
-const authenticate = require("../helpers/authMiddleware"); // Importe o middleware
+const authenticate = require("../middlewares/authMiddleware"); // Importe o middleware
 const express = require("express");
 const router = express.Router();
-const Artigo = require("../models/artigos.js");
-const artigoController = require("../controladores/artigos.js");
+const {
+	getTodosArtigosController,
+	getArtigoPorIdController,
+	// outros controladores importados
+} = require("../controladores/artigos");
 
-const mongoose = require("mongoose");
-
-// Rota para obter todos os artigos
-router.get("/", artigoController.getTodosArtigos);
+// Rota para buscar todos os artigos
+router.get("/", getTodosArtigosController);
 
 // Rota para buscar um artigo por ID
-router.get("/:id", artigoController.getArtigoPorId);
+router.get("/:id", getArtigoPorIdController);
 
-// export
+// Outras rotas aqui
+
 module.exports = router;
