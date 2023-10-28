@@ -21,11 +21,17 @@ const router = createRouter({
 		{
 			path: "/",
 			component: () => import("@/views/HomeView.vue"),
+			meta: {
+				requiresAuth: true,
+			},
 		},
 		{
 			path: "/home",
 			name: "home",
 			component: () => import("@/views/HomeView.vue"),
+			meta: {
+				requiresAuth: true,
+			},
 		},
 		{
 			path: "/questionario",
