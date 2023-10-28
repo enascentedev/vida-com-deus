@@ -73,22 +73,8 @@ export default {
 						>Home</a
 					></router-link
 				>
-				<router-link to="/criar-artigo">
-					<a href="#" class="text-sm font-semibold leading-6 text-white"
-						>Criar artigo
-					</a></router-link
-				>
-				<a href="#" class="text-sm font-semibold leading-6 text-white"
-					>Bíblia</a
-				>
 			</div>
-			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
-				<router-link to="/login">
-					<a href="#" class="text-sm font-semibold leading-6 text-white"
-						>Área restrita<span aria-hidden="true">&rarr;</span></a
-					>
-				</router-link>
-			</div>
+			<div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
 				<router-link to="/login">
 					<!-- v-show="this.storelogout.authToken" -->
@@ -143,18 +129,6 @@ export default {
 								href="#"
 								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
 								>Artigo semanal</a
-							>
-							<a
-								href="#"
-								class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-								>Biblía</a
-							>
-						</div>
-						<div class="py-6">
-							<a
-								href="#"
-								class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-								>Àrea restrita</a
 							>
 						</div>
 					</div>
