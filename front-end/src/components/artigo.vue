@@ -10,7 +10,12 @@ export default {
 	data() {
 		const store = artigosStore();
 		const artigos = store.listaDeArtigos;
-
+		const img = {
+			tempoRefletir,
+			amiltonMenezes,
+			escolhas,
+			amanhecer,
+		};
 		return {
 			tempoRefletir,
 			amiltonMenezes,
