@@ -86,12 +86,25 @@ Este documento fornece uma visão geral das branchs do projeto, destacando suas 
 **Plano**:
 
 - ajuste dos itens do header
+  ajustar o mobile
   -login será a página inicial
 - opções home devem ficar:
   quiz
   leitura diaria( pensar em um nome melhor)
   home
 - ocultar opção criar artigo ( será usada mais a frente )
-- /artigo-semanal vai consumir a rota /artigos da api
+- /artigo-semanal
+  vai consumir a rota /artigos da api
+  fotos exibidas devem ser aleatórias
+
+**Principais mudanças**:
+
+### feature/deploy
+
+**Objetivo**: colocar projeto no ar
+
+**Plano**:
+
+- estudar melhores opções e deixar back e front em um endereço de internet
 
 **Principais mudanças**:
