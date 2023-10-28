@@ -76,3 +76,22 @@ Este documento fornece uma visão geral das branchs do projeto, destacando suas 
 - Revisar tratamento de erros
 
 **Principais mudanças**:
+
+- Realizei todas as tarefas do plano
+
+### feature/front-layoutApp
+
+**Objetivo**: Ajustar layout geral para o proximo deploy
+
+**Plano**:
+
+- ajuste dos itens do header
+  -login será a página inicial
+- opções home devem ficar:
+  quiz
+  leitura diaria( pensar em um nome melhor)
+  home
+- ocultar opção criar artigo ( será usada mais a frente )
+- /artigo-semanal vai consumir a rota /artigos da api
+
+**Principais mudanças**:
