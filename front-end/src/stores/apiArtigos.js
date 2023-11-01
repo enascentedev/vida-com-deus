@@ -17,7 +17,9 @@ export const StoreApi = defineStore({
 		async load() {
 			try {
 				// request
-				this.request = await axios.get("http://localhost:8000/artigos");
+				this.request = await axios.get(
+					"https://vida-com-deus.onrender.com/artigos"
+				);
 
 				//pinia
 				this.data = this.request;

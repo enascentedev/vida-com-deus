@@ -90,7 +90,7 @@ export default {
 
 			try {
 				const response = await axios.post(
-					"http://localhost:8000/usuarios/register",
+					"https://vida-com-deus.onrender.com/usuarios/register",
 					this.data
 				);
 				setTimeout(() => {

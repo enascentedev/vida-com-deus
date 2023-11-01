@@ -2,7 +2,7 @@ import axioslib, { AxiosError } from "axios";
 
 //create instancia
 const axios = axioslib.create({
-	baseURL: "http://localhost:8000",
+	baseURL: "https://vida-com-deus.onrender.com/",
 	headers: {
 		"Content-Type": "application/json",
 	},

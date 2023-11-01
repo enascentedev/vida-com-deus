@@ -17,7 +17,7 @@ export const StoreUser = defineStore({
 		async login(data) {
 			try {
 				const response = await axios.post(
-					"http://localhost:8000/usuarios/login",
+					"https://vida-com-deus.onrender.com/usuarios/login",
 					data
 				);
 				const token = response.data.token;
