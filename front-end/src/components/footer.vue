@@ -1,5 +1,4 @@
 <script>
-import { ref, reactive } from "vue";
 export default {
 	name: "Footer",
 	setup() {},

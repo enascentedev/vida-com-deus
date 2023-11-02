@@ -10,10 +10,6 @@ COPY package*.json ./
 # Instale as dependências
 RUN npm install
 
-# Instale e reconstrua o módulo bcrypt
-RUN npm install bcrypt --build-from-source
-RUN npm rebuild bcrypt --build-from-source
-
 # Copie todos os arquivos do projeto para o container
 COPY . .
 

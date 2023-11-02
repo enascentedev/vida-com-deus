@@ -1,5 +1,4 @@
 <script>
-import { ref } from "vue";
 import { artigosStore } from "@/stores/storeArtigo";
 
 export default {
