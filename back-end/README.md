@@ -108,3 +108,25 @@ Este documento fornece uma visão geral das branchs do projeto, destacando suas 
 - estudar melhores opções e deixar back e front em um endereço de internet
 
 **Principais mudanças**:
+
+# back-end
+
+- troca do módulo bcrypt pelo bcryptjs
+- construção e execução imagem docker e adição ao dockerhub
+- criação de variável de ambiente do DB
+- Deploy no render da imagem docker
+
+# front-end
+
+- troca das url's
+- removendo importações desnecessárias do projeto
+- deploy netlify
+
+# PENDÊNCIAS
+
+- fotos repetidas na rota /home
+- melhorar header e footer
+- falha ao clicar no card
+- console log em produção
+- /artigo-semanal tem alguns artigos vazios
+- avaliar questionario
