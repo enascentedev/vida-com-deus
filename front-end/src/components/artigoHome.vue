@@ -16,10 +16,12 @@
 					v-for="item in this.data.data"
 					:key="item.id"
 					class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-white px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
-					<img
-						src="https://www.novotempo.com/wp-content/uploads/2019/10/tempo-de-refletir.png"
-						alt="teste"
-						class="absolute inset-0 -z-10 h-full w-full object-cover" />
+					<router-link to="/artigo-semanal">
+						<img
+							:src="item.imagem"
+							alt="teste"
+							class="absolute inset-0 -z-10 h-full w-full object-cover" />
+					</router-link>
 					<div
 						class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
 					<div
@@ -35,7 +37,7 @@
 							</svg>
 							<div class="flex gap-x-2.5">
 								<img
-									src="https://www.novotempo.com/wp-content/uploads/2019/10/tempo-de-refletir.png"
+									:src="item.autorImagem"
 									alt="Minha Imagem"
 									class="h-6 w-6 flex-none rounded-full bg-white" />
 								{{ item.autor }}
@@ -68,9 +70,6 @@ export default {
 			store: [],
 		};
 	},
-	// Obtenha a store do Pinia
-
-	// Função para carregar mais artigos se necessário
 
 	async mounted() {
 		// store
@@ -79,7 +78,6 @@ export default {
 
 		// data
 		this.data = await this.storeApi.load();
-		console.log(this.data.data);
 	},
 };
 </script>

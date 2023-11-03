@@ -29,7 +29,7 @@ export default {
 <template>
 	<header class="bg-info opacity-40">
 		<nav
-			class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+			class="mx-auto flex max-w-7xl items-center justify-around p-6 lg:px-8"
 			aria-label="Global">
 			<div class="flex lg:flex-1">
 				<a href="#" class="-m-1.5 p-1.5">
@@ -59,7 +59,7 @@ export default {
 					</svg>
 				</button>
 			</div>
-			<div class="hidden lg:flex lg:gap-x-12">
+			<div class="hidden lg:flex lg:gap-x-40">
 				<a href="#" class="text-sm font-semibold leading-6 text-white"
 					>Leitura diária</a
 				>

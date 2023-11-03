@@ -85,7 +85,6 @@ export default {
 
 	methods: {
 		async signin(data) {
-			console.log("Iniciando registro");
 			this.status = "info";
 
 			try {
