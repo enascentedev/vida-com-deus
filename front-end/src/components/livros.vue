@@ -35,11 +35,11 @@ export default {
 				<div class="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
 					<h1
 						class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-						Encontre seu livro
+						Encontre seu verso em algum livro
 					</h1>
 					<p class="mt-2 text-sm text-gray-500">
-						Check the status of recent orders, manage returns, and discover
-						similar products.
+						Alguns insigths de livros que contém algum passagem que vale uma
+						reflexão mais profunda.
 					</p>
 				</div>
 			</div>
@@ -99,21 +99,18 @@ export default {
 										<div
 											class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200 sm:h-40 sm:w-40">
 											<img
-												src="https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-01.jpg"
+												src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/l/i/livro_as_25_leis_b_blicas_do_sucesso.jpg"
 												alt="Moss green canvas compact backpack with double top zipper, zipper front pouch, and matching carry handle and backpack straps."
 												class="h-full w-full object-cover object-center" />
 										</div>
 										<div class="ml-6 flex-1 text-sm">
 											<div
 												class="font-medium text-gray-900 sm:flex sm:justify-between">
-												<h5>Micro Backpack</h5>
+												<h5>25 leis biblicas</h5>
 												<p class="mt-2 sm:mt-0">$70.00</p>
 											</div>
 											<p class="hidden text-gray-500 sm:mt-2 sm:block">
-												Are you a minimalist looking for a compact carry option?
-												The Micro Backpack is the perfect size for your
-												essential everyday carry items. Wear it like a backpack
-												or carry it like a satchel for all-day use.
+												vai ser o insight
 											</p>
 										</div>
 									</div>
@@ -131,8 +128,7 @@ export default {
 													clip-rule="evenodd" />
 											</svg>
 											<p class="ml-2 text-sm font-medium text-gray-500">
-												Delivered on
-												<time datetime="2021-07-12">July 12, 2021</time>
+												<time datetime="2021-07-12">novembro, 2014</time>
 											</p>
 										</div>
 
@@ -142,14 +138,14 @@ export default {
 												<a
 													href="#"
 													class="whitespace-nowrap text-indigo-600 hover:text-indigo-500"
-													>View product</a
+													>Anterior</a
 												>
 											</div>
 											<div class="flex flex-1 justify-center pl-4">
 												<a
 													href="#"
 													class="whitespace-nowrap text-indigo-600 hover:text-indigo-500"
-													>Buy again</a
+													>Próximo</a
 												>
 											</div>
 										</div>
