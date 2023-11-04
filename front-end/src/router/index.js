@@ -50,6 +50,14 @@ const router = createRouter({
 			},
 		},
 		{
+			path: "/livros",
+			name: "livrosView",
+			component: () => import("@/views/livrosView.vue"),
+			meta: {
+				requiresAuth: true,
+			},
+		},
+		{
 			path: "/criar-artigo",
 			name: "CreateArquivo",
 			component: () => import("@/views/AdicionarArtigoView.vue"),
