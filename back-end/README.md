@@ -130,3 +130,7 @@ Este documento fornece uma visão geral das branchs do projeto, destacando suas 
 - console log em produção
 - /artigo-semanal tem alguns artigos vazios
 - avaliar questionario
+
+- tirar bordas lateral imagem
+- refatorar código
+- alinhar mobile
