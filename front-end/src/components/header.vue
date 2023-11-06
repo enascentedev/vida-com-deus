@@ -59,10 +59,14 @@ export default {
 					</svg>
 				</button>
 			</div>
+
 			<div class="hidden lg:flex lg:gap-x-40">
-				<a href="#" class="text-sm font-semibold leading-6 text-white"
-					>Leitura diária</a
-				>
+				<router-link to="/livros">
+					<a href="#" class="text-sm font-semibold leading-6 text-white"
+						>Leitura diária</a
+					>
+				</router-link>
+
 				<router-link to="/artigo-semanal">
 					<a href="#" class="text-sm font-semibold leading-6 text-white"
 						>Artigo semanal</a

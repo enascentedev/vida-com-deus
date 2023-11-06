@@ -1,8 +1,14 @@
 [
-	{ "id": "3", "nome": "Livro mais que demais" },
-	{ "id": "4", "nome": "Livro irado menos irado que o outro" },
-	{ "id": "5", "nome": "Livro mais lindo do mundo" },
-	{ "id": "6", "nome": "Livro emanuel" },
-	{ "id": "1", "nome": "Livro mais lindo" },
-	{ "id": "2", "nome": "Livro mais lindo do mundo" }
+	{
+		"id": 1,
+		"title": "As 25 Leis Bíblicas do sucesso",
+		"author": "William Douglas",
+		"insights": "Talvez você não saiba, mas a Bíblia é o melhor manual sobre o sucesso já escrito até hoje. Sua sabedoria milenar continua extremamente atual, indicando os caminhos para que qualquer pessoa, religiosa ou não, possa se sair bem no mercado de trabalho e na gestão de empresas. O objetivo deste livro é revelar a você este conhecimento."
+	},
+	{
+		"id": 2,
+		"title": "As 25 Leis Bíblicas do sucesso",
+		"author": "William Douglas",
+		"insights": "Embora este livro seja focado no sucesso profissional, é bom lembrar que existem outros tipos de sucesso – pessoal, espiritual, social, familiar, financeiro – para que você possa refletir sobre o que é mais importante para a sua vida e, se possível, buscar o equilíbrio."
+	}
 ]
