@@ -1,33 +1,3 @@
-<script>
-import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
-import amiltonMenezes from "@/assets/imagens/amiltonMenezes.jpg";
-import escolhas from "@/assets/imagens/escolhas.jpg";
-import amanhecer from "@/assets/imagens/amanhecer.jpg";
-
-import { artigosStore } from "@/stores/storeArtigo";
-export default {
-	name: "livros",
-	data() {
-		const store = artigosStore();
-		const artigos = store.listaDeArtigos;
-		const img = {
-			tempoRefletir,
-			amiltonMenezes,
-			escolhas,
-			amanhecer,
-		};
-		return {
-			tempoRefletir,
-			amiltonMenezes,
-			escolhas,
-			amanhecer,
-			artigos,
-			store: null,
-		};
-	},
-};
-</script>
-
 <template>
 	<div class="bg-gray-50">
 		<main class="py-24">
@@ -95,23 +65,24 @@ export default {
 							<h4 class="sr-only">Items</h4>
 							<ul role="list" class="divide-y divide-gray-200">
 								<li class="p-4 sm:p-6">
-									<div class="flex items-center sm:items-start">
-										<div
-											class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200 sm:h-40 sm:w-40">
-											<img
-												src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/l/i/livro_as_25_leis_b_blicas_do_sucesso.jpg"
-												alt="Moss green canvas compact backpack with double top zipper, zipper front pouch, and matching carry handle and backpack straps."
-												class="h-full w-full object-cover object-center" />
-										</div>
-										<div class="ml-6 flex-1 text-sm">
+									<div v-if="currentItem">
+										<div class="flex items-center sm:items-start">
 											<div
-												class="font-medium text-gray-900 sm:flex sm:justify-between">
-												<h5>25 leis biblicas</h5>
-												<p class="mt-2 sm:mt-0">$70.00</p>
+												class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200 sm:h-40 sm:w-40">
+												<img
+													src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/l/i/livro_as_25_leis_b_blicas_do_sucesso.jpg"
+													alt="Moss green canvas compact backpack with double top zipper, zipper front pouch, and matching carry handle and backpack straps."
+													class="h-full w-full object-cover object-center" />
 											</div>
-											<p class="hidden text-gray-500 sm:mt-2 sm:block">
-												vai ser o insight
-											</p>
+											<div class="ml-6 flex-1 text-sm">
+												<div
+													class="font-medium text-gray-900 sm:flex sm:justify-between">
+													<h5>{{ currentItem.title }}</h5>
+												</div>
+												<p class="hidden text-gray-500 sm:mt-2 sm:block">
+													{{ currentItem.insights }}
+												</p>
+											</div>
 										</div>
 									</div>
 
@@ -135,18 +106,22 @@ export default {
 										<div
 											class="mt-6 flex items-center space-x-4 divide-x divide-gray-200 border-t border-gray-200 pt-4 text-sm font-medium sm:ml-4 sm:mt-0 sm:border-none sm:pt-0">
 											<div class="flex flex-1 justify-center">
-												<a
-													href="#"
+												<button
 													class="whitespace-nowrap text-indigo-600 hover:text-indigo-500"
-													>Anterior</a
-												>
+													@click="previousItem"
+													:disabled="currentIndex === 0">
+													Anterior
+												</button>
 											</div>
 											<div class="flex flex-1 justify-center pl-4">
-												<a
-													href="#"
+												<button
 													class="whitespace-nowrap text-indigo-600 hover:text-indigo-500"
-													>Próximo</a
-												>
+													@click="nextItem"
+													:disabled="
+														currentIndex >= dataLivros.data.length - 1
+													">
+													Próximo
+												</button>
 											</div>
 										</div>
 									</div>
@@ -163,3 +138,37 @@ export default {
 		</main>
 	</div>
 </template>
+<script>
+import { StoreLivros } from "@/stores/apiLivros";
+
+export default {
+	name: "livros",
+	data() {
+		return {
+			dataLivros: { data: [] },
+			currentIndex: 0,
+		};
+	},
+	computed: {
+		currentItem() {
+			return this.dataLivros.data[this.currentIndex];
+		},
+	},
+	methods: {
+		nextItem() {
+			if (this.currentIndex < this.dataLivros.data.length - 1) {
+				this.currentIndex++;
+			}
+		},
+		previousItem() {
+			if (this.currentIndex > 0) {
+				this.currentIndex--;
+			}
+		},
+	},
+	async mounted() {
+		this.storeLivros = StoreLivros();
+		this.dataLivros = await this.storeLivros.load();
+	},
+};
+</script>
