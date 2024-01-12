@@ -1,13 +1,31 @@
-![Exemplo de Gráfico](./imagens/grafico.png)
-# API
+# LAYOUT
+![Login](./front-end/src/assets/imagens-git/login.png)
+Página de login com registro de usuário.
+
+![Home](./front-end/src/assets/imagens-git/home.png)
+Página home aonde tenho alguns cards.
+
+![Artigo semanal](./front-end/src/assets/imagens-git/artigo-semanal.png)
+Algumas mensagens de Deus falando de uma maneira leve , sem crenças absolutas.
+
+![Leitura-diaria](./front-end/src/assets/imagens-git/leitura-diaria.png)
+Alguns insigts de livros que eu já li.
+
+
+# API 
 
 Criação de API com Node express
 
-# RODAR PROJETO
+# RODAR PROJETO INTERNET
+https://tempoderefletir.netlify.app/LOGIN
+email:emanuel@teste.com
+senha:emanuel10
+
+# RODAR PROJETO LOCAL
 
 npm run api
 
-# ROTAS
+# ROTAS LOCAL
 
 http://localhost:8000/artigos
 
