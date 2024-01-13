@@ -1,4 +1,4 @@
-![Exemplo de Gráfico](./imagens/grafico.png)
+
 # API
 
 Criação de API com Node express
