@@ -1,37 +1,35 @@
 <template>
-	<div class="bg-white py-10 h-full w-full">
-		<div class="mx-10 px-6">
-			<div class="mx-10 text-center">
-				<h2 class="text-4xl font-bold ">
-					Uma vida com Deus
-				</h2>
-				<p class="mt-2 text-lg text-gray-600">
-					Ouça a palavra de Deus de uma maneira leve, diversos artigos para
-					meditar e refletir.
-				</p>
-			</div>
-			<div class="mx-10 mt-16 grid grid-cols-3 gap-5 h-full">
-				<article v-for="item in this.data.data" :key="item.id" class="relative isolate flex flex-col px-2 h-80">
-					<router-link to="/artigo-semanal">
-						<img :src="item.imagem"	alt="teste"	class="absolute inset-0 -z-10 h-full w-full object-cover" />
-					</router-link>
-					<div class="flex flex-col items-end justify-end text-sm text-white">
-						<div class="absolute bottom-10">
-							<h3 class="text-lg font-semibold text-white">
-								<a href="/artigo-semanal">
-									{{ item.titulo }}
-								</a>
-							</h3>
-							<div class="flex justify-between gap-2 absolute right-0 -bottom-8">
-								<img :src="item.autorImagem" alt="Minha Imagem"	class="h-6 w-6 rounded-full bg-white" />
-							{{ item.autor }}
-							</div>
-						</div>
-					</div>
-				</article>
-			</div>
+	<div id="artigoHome">
+		<div>
+			<h2>
+				Uma vida com Deus
+			</h2>
+			<p>
+				Ouça a palavra de Deus de uma maneira leve, diversos artigos para
+				meditar e refletir.
+			</p>
 		</div>
-	</div>
+		<div class="cards">
+			<article v-for="item in this.data.data" :key="item.id">
+				<router-link to="/artigo-semanal">
+					<img :src="item.imagem"	alt="teste"	class="cards-imagem"/>
+				</router-link>
+				<div class="cards-titulo">
+					<span>
+						<h3>
+							<a href="/artigo-semanal">
+								{{ item.titulo }}
+							</a>
+						</h3>
+						<div>
+							<img :src="item.autorImagem" alt="Minha Imagem"/>
+						{{ item.autor }}
+						</div>
+					</span>
+				</div>
+			</article>
+		</div>
+		</div>
 </template>
 
 <script>
@@ -60,7 +58,40 @@ export default {
 };
 </script>
 <style scoped postcss>
-#artigo{
-
+#artigoHome{
+	@apply h-full w-full p-10 bg-white;
+	div{
+		@apply text-center;
+		h2{
+			@apply text-4xl font-bold;
+		}
+		p{
+			@apply mt-2 text-lg text-gray-600;
+		}
+	}
+	.cards{
+		@apply h-full grid grid-cols-3 gap-5 p-10;
+		article{
+			@apply h-80 relative isolate flex flex-col px-2;
+			.cards-imagem{
+				@apply h-full w-full absolute inset-0 -z-10 object-cover
+			}
+			.cards-titulo{
+				@apply flex flex-col items-end justify-end text-sm text-white;
+				span{
+				@apply absolute bottom-10;
+					h3{
+					@apply text-lg font-semibold text-white;
+					}
+					div{
+						@apply absolute right-0 -bottom-8 flex justify-between gap-2;
+					}
+					img{
+						@apply h-6 w-6 rounded-full bg-white;
+					}
+				}
+			}
+		}
+	}
 }
 </style>
