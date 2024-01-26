@@ -34,14 +34,6 @@ const router = createRouter({
 			},
 		},
 		{
-			path: "/questionario",
-			name: "questions",
-			component: () => import("@/views/questions.vue"),
-			meta: {
-				requiresAuth: true,
-			},
-		},
-		{
 			path: "/artigo-semanal",
 			name: "ArtigoView",
 			component: () => import("@/views/ArtigoView.vue"),
@@ -53,14 +45,6 @@ const router = createRouter({
 			path: "/livros",
 			name: "livrosView",
 			component: () => import("@/views/livrosView.vue"),
-			meta: {
-				requiresAuth: true,
-			},
-		},
-		{
-			path: "/criar-artigo",
-			name: "CreateArquivo",
-			component: () => import("@/views/AdicionarArtigoView.vue"),
 			meta: {
 				requiresAuth: true,
 			},
