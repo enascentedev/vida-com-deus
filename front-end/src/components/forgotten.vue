@@ -124,7 +124,7 @@ export default {
 		@apply text-center mt-3 text-base-content;
 
 		a {
-			@apply block mt-1 text-primary-focus underline font-semibold;
+			@apply block mt-1 underline font-semibold;
 		}
 	}
 
