@@ -1,51 +1,40 @@
 <template>
-	<div>
-		<div class="p-8">
-			<h2 class="font-bold tracking-tight text-gray-900 text-3xl">
+	<div id="livros">
+		<div class="titulo">
+			<h2>
 				Encontre seu verso em algum livro
 			</h2>
-			<p class="mt-2 text-base ">
+			<p>
 				Alguns insigths de livros que contém algum passagem que vale uma
 				reflexão mais profunda.
 			</p>
 		</div>
-		<section class="w-full h-1/2 px-10 ">
-			<article class="shadow-md p-4 border-t-2 border-gray-100 rounded-md">
-				<div v-if="currentItem" class="flex items-center">
-					<figure class="h-80 w-80 flex-shrink-0">
+		<section>
+			<article>
+				<div v-if="currentItem" class="container-artigo">
+					<figure>
 						<img
 							src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/l/i/livro_as_25_leis_b_blicas_do_sucesso.jpg"
 							alt="imagem do livro"
-							class="h-auto w-auto object-cover object-center" />
-							<p class="relative text-center mt-2 ">
+						 />
+							<p>
 								<cite>Wiliam Douglas</cite>
 							</p>
 					</figure>
-					<div class="flex flex-col text-sm gap-5">
-						<h2 class="font-bold text-2xl">{{ currentItem.title }}</h2>
-						<p class="text-base">
+					<div class="container-insigth">
+						<h2>{{ currentItem.title }}</h2>
+						<p>
 							{{ currentItem.insights }}
 						</p>
 					</div>
-				</div>
-				<div class="flex justify-center mt-6">
-					<div class="flex items-center">
-					</div>
-					<div class="flex items-center gap-2">
-						<div class="flex flex-1 justify-center">
-							<button	class="hover:bg-sky-500" @click="previousItem" :disabled="currentIndex === 0">
-								Anterior
-							</button>
-						</div>
-						<div class="flex flex-1 justify-center">
-							<button	class="hover:bg-sky-500" @click="nextItem" :disabled="currentIndex>= dataLivros.data.length">
-								Próximo
-							</button>
-						</div>
-					</div>
+					
 				</div>
 			</article>
 		</section>
+		<div class="container-button">
+			<button @click="previousItem" :disabled="currentIndex === 0">Anterior</button>
+			<button @click="nextItem" :disabled="currentIndex>= dataLivros.data.length">Próximo</button>
+		</div>
 	</div>
 </template>
 <script>
@@ -82,3 +71,49 @@ export default {
 	},
 };
 </script>
+<style scoped postcss>
+#livros {
+.titulo {
+	@apply p-10;
+	h2 {
+		@apply font-bold tracking-tight text-gray-900 text-3xl;
+	}
+	p {
+		@apply mt-2 text-base;
+	}
+}
+	section {
+		@apply w-full h-1/2 px-10;
+		article{
+			@apply shadow-md border-t-2 border-gray-100 rounded-md;
+			.container-artigo{
+				@apply flex items-center p-10;
+				figure{
+					@apply h-80 w-80 flex-shrink-0;
+					img{
+						@apply h-auto w-auto object-cover object-center;
+					}
+					p{
+						@apply relative text-center mt-2;
+					}
+				}
+				.container-insigth{
+					@apply flex flex-col text-sm gap-5;
+					h2{
+						@apply font-bold text-2xl;
+					}
+					p{
+						@apply text-base;
+					}
+				}
+			}
+		}
+	}
+	.container-button{
+		@apply flex justify-center gap-2 mt-5;
+		button{
+			@apply hover:bg-sky-500;
+		}
+	}
+}
+</style>
