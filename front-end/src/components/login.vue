@@ -166,7 +166,7 @@ export default {
 		}
 
 		.buttonclass {
-			@apply mt-6  lg:w-full bg-blue-500 btn-outline btn-primary hover:bg-primary  text-base-content btn;
+			@apply mt-6  lg:w-full bg-blue-500 btn-outline btn-primary hover:bg-base-100  text-base-content btn;
 		}
 		.recover-password {
 			@apply my-1 text-right block underline text-primary;

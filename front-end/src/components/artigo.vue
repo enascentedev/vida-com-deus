@@ -62,7 +62,7 @@ export default {
 
 <style scoped postcss>
 #artigo {
-	@apply w-full h-full mx-10 py-10 px-8 bg-white;
+	@apply w-full h-full mx-10 py-10 px-8 bg-base-100;
 	h2 {
 		@apply text-4xl font-bold
 	};

@@ -1,7 +1,7 @@
 @layer components {
 	button {
 		@apply btn;
-		@apply btn-outline btn-primary hover:bg-primary;
+		@apply btn-outline btn-primary hover:bg-base-100;
 	}
 
 	footer {

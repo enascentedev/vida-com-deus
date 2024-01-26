@@ -41,7 +41,7 @@ container-marketing {
 		}
 	}
 	.video {
-		@apply my-8 w-1/2 p-2  rounded-md shadow-md bg-primary;
+		@apply my-8 w-1/2 p-2  rounded-md shadow-md bg-base-100;
 	}
 	.social {
 		@apply w-full pl-4 flex flex-col gap-1 items-center flex-wrap content-start;
