@@ -49,12 +49,12 @@ export default {
 <style scoped postcss>
 #header{
 	nav {
-		@apply flex items-center justify-between px-10 py-7 bg-info opacity-40;
+		@apply flex items-center justify-between px-10 py-7 bg-primary;
 		img{
 			@apply h-8 w-auto;
 		}
 		a {
-			@apply text-sm font-semibold text-white;
+			@apply text-sm font-semibold text-base-100;
 		}
 	}
 }
