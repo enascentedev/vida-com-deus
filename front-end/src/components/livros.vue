@@ -76,16 +76,16 @@ export default {
 .titulo {
 	@apply p-10;
 	h2 {
-		@apply font-bold tracking-tight text-gray-900 text-3xl;
+		@apply font-bold tracking-tight text-base-content text-3xl;
 	}
 	p {
-		@apply mt-2 text-base;
+		@apply mt-2 text-base text-base-content;
 	}
 }
 	section {
 		@apply w-full h-1/2 px-10;
 		article{
-			@apply shadow-md border-t-2 border-gray-100 rounded-md;
+			@apply shadow-md border-t-2 border-base-200 rounded-md;
 			.container-artigo{
 				@apply flex items-center p-10;
 				figure{
@@ -94,16 +94,16 @@ export default {
 						@apply h-auto w-auto object-cover object-center;
 					}
 					p{
-						@apply relative text-center mt-2;
+						@apply relative text-center mt-2 text-base-content;
 					}
 				}
 				.container-insigth{
 					@apply flex flex-col text-sm gap-5;
 					h2{
-						@apply font-bold text-2xl;
+						@apply font-bold text-2xl text-base-content;
 					}
 					p{
-						@apply text-base;
+						@apply text-base text-base-content;
 					}
 				}
 			}
@@ -112,7 +112,7 @@ export default {
 	.container-button{
 		@apply flex justify-center gap-2 mt-5;
 		button{
-			@apply hover:bg-sky-500;
+			@apply hover:bg-sky-500 text-base-content;
 		}
 	}
 }

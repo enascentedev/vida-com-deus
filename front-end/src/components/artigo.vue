@@ -62,12 +62,13 @@ export default {
 
 <style scoped postcss>
 #artigo {
-	@apply w-full h-full mx-10 py-10 px-8 bg-white;
+	@apply w-full h-full mx-10 py-10 px-8 bg-base-100;
 	h2 {
-		@apply text-4xl font-bold
+		@apply text-4xl font-bold text-base-content
 	};
 	p{
-		@apply mt-2 text-lg;
+		@apply mt-2 text-lg text-base-content
+	};
 	}
 	article{
 		@apply flex justify-between gap-8 mt-10 space-y-20;
@@ -82,16 +83,16 @@ export default {
 			legend{
 				@apply flex items-center gap-4 text-xs;
 				a{
-					@apply relative z-10 rounded-full bg-gray-100 px-3 py-1.5;
+					@apply relative z-10 rounded-full bg-base-100 px-3 py-1.5;
 				}
 			}
 			.conteudo{
 				@apply w-full;
 				h3{
-					@apply mt-3 text-lg font-semibold;
+					@apply mt-3 text-lg font-semibold text-base-content;
 				}
 				p{
-					@apply mt-5 text-sm;
+					@apply mt-5 text-sm text-base-content;
 				}
 			}
 			.autor{
@@ -100,10 +101,9 @@ export default {
 					@apply h-10 w-10 rounded-full;
 				}
 				cite{
-					@apply font-semibold;
+					@apply font-semibold text-base-content;
 				}
 			}
 		}
 	}
-}
 </style>
