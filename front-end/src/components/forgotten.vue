@@ -15,10 +15,9 @@
 					type="email"
 					class="inputGeral"
 					required />
-				<font-awesome-icon :icon="['fa', 'user']" class="i" />
 			</label>
 			<div v-if="status === 'info'" class="alert alert-info">
-				<font-awesome-icon :icon="['fasr', 'circle-exclamation']" />
+				<i class="fa-solid fa-exclamation"></i>
 				<div class="alert-load">
 					<strong>Aguarde!</strong>
 					Carregando
@@ -26,7 +25,7 @@
 				</div>
 			</div>
 			<div v-if="status === 'warning'" class="alert alert-warning">
-				<font-awesome-icon :icon="['fasr', 'triangle-exclamation']" />
+				<i class="fa-solid fa-exclamation"></i>
 				<span>
 					<strong>Lembrar senha!</strong>
 					Um email com instruções para recuperação de senha foi encaminhado ao
@@ -34,7 +33,7 @@
 				</span>
 			</div>
 			<div v-if="status === 'error'" class="alert alert-error">
-				<font-awesome-icon :icon="['fasr', 'circle-xmark']" />
+				<i class="fa-solid fa-xmark"></i>
 				<span>
 					<strong>Usuário ou e-mail inválido!</strong>
 

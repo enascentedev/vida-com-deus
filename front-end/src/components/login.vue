@@ -29,7 +29,7 @@
 					required />
 			</label>
 			<div v-if="status === 'info'" class="alert alert-info rounded-md">
-				<font-awesome-icon :icon="['fasr', 'circle-exclamation']" />
+				<i class="fa-solid fa-exclamation"></i>
 				<div class="alert-load">
 					<strong>Aguarde!</strong>
 					Carregando
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 			<div v-if="status === 'warning'" class="alert alert-warning rounded-md">
-				<font-awesome-icon :icon="['fasr', 'triangle-exclamation']" />
+				<i class="fa-solid fa-exclamation"></i>
 				<span>
 					<strong>Erro!</strong>
 					Digite corretamente usuário e senha!
