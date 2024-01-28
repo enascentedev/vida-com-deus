@@ -12,7 +12,7 @@
 				Usuário ou Email
 				<input
 					id="email"
-					v-model="data.user"
+					v-model="data.username"
 					name="email"
 					type="email"
 					class="inputGeral"
@@ -92,7 +92,7 @@ export default {
 		return {
 			status: "",
 			data: {
-				user: "",
+				username: "",
 				password: "",
 			},
 		};
@@ -110,11 +110,11 @@ export default {
 			this.response = await this.store.login(this.data);
 
 			// data
-			this.data.user = this.data.user.trim();
+			this.data.username = this.data.username.trim();
 			this.data.password = this.data.password.trim();
 
 			// check
-			if (this.data.user == "" || this.data.password == "") {
+			if (this.data.username == "" || this.data.password == "") {
 				this.status = "warning";
 				return;
 			}

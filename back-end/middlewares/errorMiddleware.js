@@ -22,7 +22,7 @@ module.exports = (err, req, res, next) => {
 			.json({ message: err.message, type: "authentication" });
 	}
 
-	// Se chegou até aqui, é um erro desconhecido
+	// erro desconhecido
 	console.error(err);
 	return res.status(500).json({ message: "Internal Server Error" });
 };
