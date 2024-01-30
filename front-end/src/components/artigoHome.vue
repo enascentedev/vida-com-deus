@@ -83,16 +83,20 @@ export default {
 		}
 	}
 	.cards{
-		@apply h-full grid grid-cols-3 gap-5 p-10;
+		@apply h-full grid md:grid-cols-3 grid-cols-1 gap-5 p-2;
+		@apply sm:p-10;
 		article{
 			@apply h-80 relative isolate flex flex-col px-2;
 			.cards-imagem{
-				@apply h-full w-full absolute inset-0 -z-10 object-cover
+				@apply h-full w-11/12 absolute inset-0 -z-10 object-cover;
+				@apply sm:w-full;
 			}
 			.cards-titulo{
-				@apply flex flex-col items-end justify-end text-sm text-base-100;
+				@apply w-full flex flex-col items-end justify-center text-sm text-base-100 pr-10;
+				@apply sm:pr-0;
 				span{
-				@apply absolute bottom-10;
+				@apply absolute bottom-20;
+				@apply sm:bottom-10;
 					h3{
 					@apply text-lg font-semibold text-base-100;
 					}
