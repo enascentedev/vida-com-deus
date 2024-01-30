@@ -1,7 +1,6 @@
 <template>
 	<div class="container">
-		<img
-			class="w-auto h-auto mx-auto"
+		<img class="w-auto h-auto mx-auto"
 			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0ZRdV_U9tw_Iz7_eO2R74xNCqmZk3ObmNQ&usqp=CAU"
 			alt="life com deus" />
 		<!-- <h1>Life com Deus</h1> -->
@@ -10,23 +9,11 @@
 		<form class="formulario">
 			<label class="labelclass" for="email">
 				Usuário ou Email
-				<input
-					id="email"
-					v-model="data.username"
-					name="email"
-					type="email"
-					class="inputGeral"
-					required />
+				<input id="email" v-model="data.username" name="email" type="email" class="inputGeral" required />
 			</label>
 			<label class="labelclass" for="password">
 				Senha
-				<input
-					class="inputGeral"
-					id="password"
-					v-model="data.password"
-					name="password"
-					type="password"
-					required />
+				<input class="inputGeral" id="password" v-model="data.password" name="password" type="password" required />
 			</label>
 			<div v-if="status === 'info'" class="alert alert-info rounded-md">
 				<i class="fa-solid fa-exclamation"></i>
@@ -58,12 +45,7 @@
 					Usuário validado com sucesso, redirecionando...
 				</span>
 			</div>
-			<button
-				class="buttonclass"
-				ref="button"
-				:disabled="status === 'success'"
-				accesskey="13"
-				@click.prevent="loginUser">
+			<button class="buttonclass" ref="button" :disabled="status === 'success'" accesskey="13" @click.prevent="loginUser">
 				Entrar
 			</button>
 
@@ -138,21 +120,23 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .container {
-	@apply py-5 px-4  h-screen flex flex-col;
+	@apply py-5 px-4 h-screen flex flex-col;
 
 	hr {
 		@apply my-4 block;
 	}
+
 	h1 {
 		@apply text-6xl text-primary font-bold text-center;
 	}
 
 	h2 {
-		@apply mt-2 text-center text-2xl  tracking-tight;
+		@apply mt-2 text-center text-2xl tracking-tight;
 	}
 
 	.formulario {
 		@apply flex flex-col mx-10;
+
 		.labelclass {
 			@apply label flex flex-col items-start relative;
 
@@ -166,8 +150,9 @@ export default {
 		}
 
 		.buttonclass {
-			@apply mt-6  lg:w-full bg-blue-500 btn-outline btn-primary hover:bg-base-100  text-base-content btn;
+			@apply mt-6 lg:w-full bg-blue-500 btn-outline btn-primary hover:bg-base-100 text-base-content btn;
 		}
+
 		.recover-password {
 			@apply my-1 text-right block underline text-primary;
 		}
@@ -202,9 +187,10 @@ export default {
 			@apply max-w-[142px];
 		}
 	}
+
 	/* link com svg voltar login style exclusivo register */
 }
+
 .alert {
 	@apply rounded-md;
-}
-</style>
+}</style>
