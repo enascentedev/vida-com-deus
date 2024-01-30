@@ -62,7 +62,8 @@ export default {
 
 <style scoped postcss>
 #artigo {
-	@apply w-full h-full mx-10 py-10 px-8 bg-base-100;
+	@apply w-full h-full flex  p-10 bg-base-100;
+	
 	h2 {
 		@apply text-4xl font-bold text-base-content
 	};
@@ -71,11 +72,12 @@ export default {
 	};
 	}
 	article{
-		@apply flex justify-between gap-8 mt-10 space-y-20;
+		@apply w-full flex flex-col md:flex-row justify-between gap-2 mt-10;
 		div{
 			@apply relative;
 		.img{
-			@apply absolute inset-0 h-full w-full
+			@apply sm:absolute sm:inset-0 h-auto w-auto;
+			@apply flex flex-col
 		}
 		}
 		section{
@@ -87,12 +89,12 @@ export default {
 				}
 			}
 			.conteudo{
-				@apply w-full;
+				@apply w-full flex flex-wrap;
 				h3{
 					@apply mt-3 text-lg font-semibold text-base-content;
 				}
 				p{
-					@apply mt-5 text-sm text-base-content;
+					@apply px-2 text-sm text-base-content text-justify;
 				}
 			}
 			.autor{

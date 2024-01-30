@@ -70,9 +70,9 @@
 			<router-link class="recover-password" to="/register">
 				registre-se
 			</router-link>
-			<router-link class="recover-password" to="/lembrar-senha">
+			<!-- <router-link class="recover-password" to="/lembrar-senha">
 				lembrar senha
-			</router-link>
+			</router-link> -->
 		</form>
 		<div class="suport">
 			<p>Problemas no acesso ou ainda não usa o life com Deus?</p>
