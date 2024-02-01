@@ -15,17 +15,25 @@ export const StoreApi = defineStore({
 
 	actions: {
 		async load() {
+			if (!localStorage.getItem("apiArtigos")) {
 			try {
 				// request
 				this.request = await axios.get(
 					"https://vida-com-deus.onrender.com/artigos"
 				);
-
+				// Cache
+				localStorage.setItem(
+					"apiArtigos",
+					JSON.stringify(this.request)
+				);
 				//pinia
 				this.data = this.request;
 			} catch (error) {
 				this.error = error.message;
 			}
+		} else {
+			this.data = JSON.parse(localStorage.getItem("StoreCategory"));
+		}
 
 			// return
 			return this.data;

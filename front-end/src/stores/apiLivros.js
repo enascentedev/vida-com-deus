@@ -15,10 +15,17 @@ export const StoreLivros = defineStore({
 
 	actions: {
 		async load() {
+		if (!localStorage.getItem("apiLivros")) {
 			try {
 				// request
 				this.request = await axios.get(
 					"https://vida-com-deus.onrender.com/livros"
+				);
+
+				// Cache
+				localStorage.setItem(
+					"apiLivros",
+					JSON.stringify(this.request.data.data)
 				);
 
 				//pinia
@@ -27,6 +34,9 @@ export const StoreLivros = defineStore({
 				this.error = error.message;
 			}
 
+		} else {
+			this.data = JSON.parse(localStorage.getItem("apiLivros"));
+		}
 			// return
 			return this.data;
 		},
