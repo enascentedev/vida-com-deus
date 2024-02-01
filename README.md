@@ -8,7 +8,7 @@ Este é um projeto full stack que demonstra a aplicação dos meus conhecimentos
 Além das funcionalidades técnicas, o projeto também incorpora uma abordagem leve sobre a palavra de Deus, proporcionando uma mensagem positiva aos visitantes. Adicionalmente, compartilho insights de livros que foram significativos em minha jornada.
 
 ## Conquistas
-Estou orgulhoso de alcançar 100 commits neste projeto, resultado da minha dedicação diária e empenho no seu desenvolvimento.
+Estou orgulhoso de alcançar 100 commits neste projeto, resultado da minha dedicação diária e empenho no meu desenvolvimento.
 
 ## Tecnologias Empregadas
 **Backend:**
