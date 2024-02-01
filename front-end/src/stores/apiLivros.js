@@ -25,7 +25,7 @@ export const StoreLivros = defineStore({
 				// Cache
 				localStorage.setItem(
 					"apiLivros",
-					JSON.stringify(this.request.data.data)
+					JSON.stringify(this.request)
 				);
 
 				//pinia

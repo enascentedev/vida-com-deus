@@ -9,17 +9,17 @@
 				meditar e refletir.
 			</p>
 		</div>
-		<div>
+		<div class="theme">
 			<div>
 				Theme
 				<i class="fa-solid fa-caret-down"></i>
 			</div>
 			<ul class="dropdown-content container-theme">
-				<li><input type="radio" value="default" /></li>
-				<li><input type="radio" value="retro" /></li>
-				<li><input type="radio"	value="cyberpunk" /></li>
-				<li><input type="radio"	value="valentine" /></li>
-				<li><input type="radio" value="aqua" /></li>
+				<li><input type="radio" name="theme-dropdown" value="default"/></li>
+				<li><input type="radio" name="theme-dropdown" value="retro" /></li>
+				<li><input type="radio" name="theme-dropdown" value="cyberpunk" /></li>
+				<li><input type="radio" name="theme-dropdown" value="valentine" /></li>
+				<li><input type="radio" name="theme-dropdown" value="aqua" /></li>
 			</ul>
 		</div>
 		<div class="cards">
@@ -85,51 +85,54 @@ export default {
 			@apply mt-2 text-lg text-base-content;
 		}
 	}
-.theme{
-	@apply dropdown mb-2;
-	div{
-		@apply btn m-1;
-	}
-	.container-theme{
-		@apply w-52 flex flex-col gap-2  z-[1] p-2 rounded-box border-base-300 bg-gray-100;
-	}
-	li {
-		@apply theme-controller btn btn-sm btn-block btn-ghost justify-start;
-	}
 
+	.theme {
+		@apply dropdown mb-2;
+
+		div {
+			@apply btn m-1;
+		}
+
+		.container-theme {
+			@apply z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52;
+		}
+
+		li {
+			@apply btn btn-sm btn-block btn-ghost justify-start;
+		}
 	}
 }
-	.cards {
-		@apply h-full grid md:grid-cols-3 grid-cols-1 gap-5 p-2;
-		@apply sm:p-10;
 
-		article {
-			@apply h-80 relative isolate flex flex-col px-2;
+.cards {
+	@apply h-full grid md:grid-cols-3 grid-cols-1 gap-5 p-2;
+	@apply sm:p-10;
 
-			.cards-imagem {
-				@apply h-full w-11/12 absolute inset-0 -z-10 object-cover;
-				@apply sm:w-full;
-			}
+	article {
+		@apply h-80 relative isolate flex flex-col px-2;
 
-			.cards-titulo {
-				@apply w-full flex flex-col items-end justify-center text-sm text-base-100 pr-10;
-				@apply sm:pr-0;
+		.cards-imagem {
+			@apply h-full w-11/12 absolute inset-0 -z-10 object-cover;
+			@apply sm:w-full;
+		}
 
-				span {
-					@apply absolute bottom-20;
-					@apply sm:bottom-10;
+		.cards-titulo {
+			@apply w-full flex flex-col items-end justify-center text-sm text-base-100 pr-10;
+			@apply sm:pr-0;
 
-					h3 {
-						@apply text-lg font-semibold text-base-100;
-					}
+			span {
+				@apply absolute bottom-20;
+				@apply sm:bottom-10;
 
-					div {
-						@apply absolute right-0 -bottom-8 flex justify-between gap-2;
-					}
+				h3 {
+					@apply text-lg font-semibold text-base-100;
+				}
 
-					img {
-						@apply h-6 w-6 rounded-full bg-base-100;
-					}
+				div {
+					@apply absolute right-0 -bottom-8 flex justify-between gap-2;
+				}
+
+				img {
+					@apply h-6 w-6 rounded-full bg-base-100;
 				}
 			}
 		}

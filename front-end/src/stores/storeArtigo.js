@@ -1,5 +1,4 @@
 // storeArtigo.js
-import { ref } from "vue";
 import { defineStore } from "pinia";
 import tempoRefletir from "@/assets/imagens/tempoRefletir.jpg";
 import escolhas from "@/assets/imagens/escolhas.jpg";
