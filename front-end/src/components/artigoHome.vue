@@ -10,16 +10,17 @@
 			</p>
 		</div>
 		<div class="theme">
-			<div>
+			<div tabindex="0" role="button" class="btn">
 				Theme
 				<i class="fa-solid fa-caret-down"></i>
 			</div>
 			<ul class="dropdown-content container-theme">
-				<li><input type="radio" name="theme-dropdown" value="default"/></li>
-				<li><input type="radio" name="theme-dropdown" value="retro" /></li>
-				<li><input type="radio" name="theme-dropdown" value="cyberpunk" /></li>
-				<li><input type="radio" name="theme-dropdown" value="valentine" /></li>
-				<li><input type="radio" name="theme-dropdown" value="aqua" /></li>
+				<li><input type="radio" name="theme-dropdown" aria-label="Default" value="default"
+						class="container-selecao" /></li>
+				<li><input type="radio" name="theme-dropdown" aria-label="Retro" value="retro" class="container-selecao" /></li>
+				<li><input type="radio" name="theme-dropdown" aria-label="Cyberpunk" value="cyberpunk" class="container-selecao" /></li>
+				<li><input type="radio" name="theme-dropdown" aria-label="Valentine" value="valentine" class=" container-selecao " /></li>
+				<li><input type="radio" name="theme-dropdown" aria-label="Aqua" value="aqua" class="container-selecao" /></li>
 			</ul>
 		</div>
 		<div class="cards">
@@ -90,16 +91,17 @@ export default {
 		@apply dropdown mb-2;
 
 		div {
-			@apply btn m-1;
+			@apply m-1;
 		}
 
 		.container-theme {
 			@apply z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52;
+
+			 .container-selecao {
+				@apply flex justify-start text-black btn btn-sm btn-block btn-ghost;
+			}
 		}
 
-		li {
-			@apply btn btn-sm btn-block btn-ghost justify-start;
-		}
 	}
 }
 
@@ -137,4 +139,5 @@ export default {
 			}
 		}
 	}
-}</style>
+}
+</style>
