@@ -5,6 +5,10 @@
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0ZRdV_U9tw_Iz7_eO2R74xNCqmZk3ObmNQ&usqp=CAU"
 					alt="logo" />
 			</router-link>
+			<router-link to="/chatboot">
+				<i class="fa-solid fa-comment-dots"></i>
+				Chatboot
+			</router-link>
 			<router-link to="/livros">
 				<i class="fa-solid fa-book-bible"></i>
 				Leitura diária

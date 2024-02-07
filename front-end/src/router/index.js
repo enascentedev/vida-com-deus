@@ -49,6 +49,14 @@ const router = createRouter({
 				requiresAuth: true,
 			},
 		},
+		{
+			path: "/chatboot",
+			name: "chatBoot",
+			component: () => import("@/views/chatbootView.vue"),
+			meta: {
+				requiresAuth: true,
+			},
+		},
 	],
 });
 
