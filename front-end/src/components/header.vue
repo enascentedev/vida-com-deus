@@ -6,15 +6,19 @@
 					alt="logo" />
 			</router-link>
 			<router-link to="/livros">
+				<i class="fa-solid fa-book-bible"></i>
 				Leitura diária
 			</router-link>
 			<router-link to="/artigo-semanal">
+				<i class="fa-solid fa-newspaper"></i>
 				Artigo semanal
 			</router-link>
 			<router-link to="/home">
+				<i class="fa-solid fa-house"></i>
 				Home
 			</router-link>
 			<router-link to="/login" @click="logout()">
+				<i class="fa-solid fa-right-from-bracket"></i>
 				Sair
 			</router-link>
 		</nav>
@@ -34,21 +38,25 @@
 				<ul>
 					<li>
 						<router-link to="/livros">
+							<i class="fa-solid fa-book-bible"></i>
 							Leitura diária
 						</router-link>
 					</li>
 					<li>
 						<router-link to="/artigo-semanal">
+							<i class="fa-solid fa-newspaper"></i>
 							Artigo semanal
 						</router-link>
 					</li>
 					<li>
 						<router-link to="/home">
+							<i class="fa-solid fa-house"></i>
 							Home
 						</router-link>
 					</li>
 					<li>
 						<router-link to="/login" @click="logout()">
+							<i class="fa-solid fa-right-from-bracket"></i>
 							Sair
 						</router-link>
 					</li>
