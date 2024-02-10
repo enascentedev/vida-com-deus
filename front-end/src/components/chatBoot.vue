@@ -20,7 +20,7 @@
 				</div>
 			</div>
 
-			<div class="chat chat-end">
+			<div class="chat chat-end p-5">
 				<div class="chat-image avatar">
 					<div class="w-10 rounded-full">
 						<img alt="Tailwind CSS chat bubble component"
