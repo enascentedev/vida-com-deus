@@ -26,9 +26,9 @@ export default {
 	@apply flex min-h-screen;
 }
 #register {
-	@apply w-1/3 hidden xl:block;
+	@apply w-1/5 hidden xl:block;
 }
 #chat {
-	@apply xl:w-2/3 w-full bg-base-100;
+	@apply xl:w-4/5 w-full bg-base-100;
 }
 </style>

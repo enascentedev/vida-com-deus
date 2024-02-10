@@ -1,12 +1,12 @@
 // chatController.js
 const fetch = require('node-fetch');
-const { OPENAI_API_KEY } = process.env; // Garanta que a chave da API esteja armazenada de forma segura
+const { OPENAI_API_KEY } = process.env; // Garante que a chave da API esteja armazenada de forma segura
 
 exports.enviarPergunta = async (req, res) => {
   const pergunta = req.body.pergunta;
 
   try {
-    const response = await fetch('https://api.openai.com/v4/completions', {
+    const response = await fetch('https://api.openai.com/v1/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -16,6 +16,7 @@ exports.enviarPergunta = async (req, res) => {
         model: "text-davinci-003", // Especifica o modelo
         prompt: pergunta, // pergunta
         max_tokens: 100, // Limite de tokens na resposta
+				temperature: 0.5
       })
     });
 
