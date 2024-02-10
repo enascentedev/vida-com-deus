@@ -1,14 +1,14 @@
 <template>
-	<div class="flex flex-col h-screen">
+	<div id="chatBoot">
 
-		<div class="flex flex-col flex-1 w-full">
+		<div class="container-avatar">
 
 			<div class="chat chat-start p-5">
 				<div class="chat-image avatar">
-					<div class="w-10 rounded-full">
+					<figure class="w-10 rounded-full">
 						<img alt="Tailwind CSS chat bubble component"
 							src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-					</div>
+					</figure>
 				</div>
 				<div class="chat-header">
 					Obi-Wan Kenobi
@@ -22,10 +22,10 @@
 
 			<div class="chat chat-end p-5">
 				<div class="chat-image avatar">
-					<div class="w-10 rounded-full">
+					<figure class="w-10 rounded-full">
 						<img alt="Tailwind CSS chat bubble component"
 							src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-					</div>
+					</figure>
 				</div>
 				<div class="chat-header">
 					Anakin
@@ -58,4 +58,11 @@ export default {
 
 };
 </script>
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+#chatBoot {
+@apply flex flex-col h-screen;
+.container-avatar{
+	@apply flex flex-col flex-1 w-full;
+}
+}
+</style>
