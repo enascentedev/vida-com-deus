@@ -1,62 +1,122 @@
 [
 	{
-		"id": 1,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Talvez você não saiba, mas a Bíblia é o melhor manual sobre o sucesso já escrito até hoje. Sua sabedoria milenar continua extremamente atual, indicando os caminhos para que qualquer pessoa, religiosa ou não, possa se sair bem no mercado de trabalho e na gestão de empresas. O objetivo deste livro é revelar a você este conhecimento."
+			"id": 1,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Talvez você não saiba, mas a Bíblia é o melhor manual sobre o sucesso já escrito até hoje. Sua sabedoria milenar continua extremamente atual, indicando os caminhos para que qualquer pessoa, religiosa ou não, possa se sair bem no mercado de trabalho e na gestão de empresas. O objetivo deste livro é revelar a você este conhecimento."
 	},
 	{
-		"id": 2,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Embora este livro seja focado no sucesso profissional, é bom lembrar que existem outros tipos de sucesso pessoal, espiritual, social, familiar, financeiro para que você possa refletir sobre o que é mais importante para a sua vida e, se possível, buscar o equilíbrio."
+			"id": 2,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Embora este livro seja focado no sucesso profissional, é bom lembrar que existem outros tipos de sucesso: pessoal, espiritual, social, familiar, financeiro para que você possa refletir sobre o que é mais importante para a sua vida e, se possível, buscar o equilíbrio."
 	},
 	{
-		"id": 3,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Ficar aberto ao feedback do seu chefe ou de seus colegas de trabalho e aprender a examinar quais críticas procedem e quais podem ser ignoradas é difícil, mas é a única forma de crescer."
+			"id": 3,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Ficar aberto ao feedback do seu chefe ou de seus colegas de trabalho e aprender a examinar quais críticas procedem e quais podem ser ignoradas é difícil, mas é a única forma de crescer."
 	},
 	{
-		"id": 4,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Para não cometer o pecado da pressa, o mais importante é saber que a melhor opção não é a mais fácil nem a mais rápida. Quando o assunto é sucesso, como diz o fenômeno do basquete Michael Jordan, 'não existem atalhos' e quem se empenha pela metade corre o risco de só obter meios resultados. Ou nenhum."
+			"id": 4,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Para não cometer o pecado da pressa, o mais importante é saber que a melhor opção não é a mais fácil nem a mais rápida. Quando o assunto é sucesso, como diz o fenômeno do basquete Michael Jordan, 'não existem atalhos' e quem se empenha pela metade corre o risco de só obter meios resultados. Ou nenhum."
 	},
 	{
-		"id": 5,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Não tenha pressa em ser promovido, nem em ganhar dinheiro. A ordem natural é: você trabalha e aí tem sucesso; você se realiza e então ganha dinheiro; você planta e depois colhe."
+			"id": 5,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Não tenha pressa em ser promovido, nem em ganhar dinheiro. A ordem natural é: você trabalha e aí tem sucesso; você se realiza e então ganha dinheiro; você planta e depois colhe."
 	},
 	{
-		"id": 6,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Muita gente coloca o sucesso no futuro e nunca dá o primeiro passo rumo a ele. Fica pensando: 'Quando eu mudar de emprego, vou chegar no horário', 'Quando for reconhecido, trabalharei melhor', 'Quando eu ganhar bem, farei minhas tarefas com mais capricho'."
+			"id": 6,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Muita gente coloca o sucesso no futuro e nunca dá o primeiro passo rumo a ele. Fica pensando: 'Quando eu mudar de emprego, vou chegar no horário', 'Quando for reconhecido, trabalharei melhor', 'Quando eu ganhar bem, farei minhas tarefas com mais capricho'."
 	},
 	{
-		"id": 7,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Um erro muito comum é o de desconsiderar a linha do tempo. Se você olhar um sapato que está sendo engraxado, pode até achar que ele é mais feio que o outro que não está sendo engraxado. Há nisso uma ilusão de ótica, uma visão míope do que é e do que poderá vir a ser. Não se pode esquecer que o sapato que está sendo engraxado daqui a pouco vai estar brilhando mais do que o que não recebeu a graxa."
+			"id": 7,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Um erro muito comum é o de desconsiderar a linha do tempo. Se você olhar um sapato que está sendo engraxado, pode até achar que ele é mais feio que o outro que não está sendo engraxado. Há nisso uma ilusão de ótica, uma visão míope do que é e do que poderá vir a ser. Não se pode esquecer que o sapato que está sendo engraxado daqui a pouco vai estar brilhando mais do que o que não recebeu a graxa."
 	},
 	{
-		"id": 8,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "Um erro muito comum é o de desconsiderar a linha do tempo. Se você olhar um sapato que está sendo engraxado, pode até achar que ele é mais feio que o outro que não está sendo engraxado. Há nisso uma ilusão de ótica, uma visão míope do que é e do que poderá vir a ser. Não se pode esquecer que o sapato que está sendo engraxado daqui a pouco vai estar brilhando mais do que o que não recebeu a graxa."
+			"id": 8,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Um erro muito comum é o de desconsiderar a linha do tempo. Se você olhar um sapato que está sendo engraxado, pode até achar que ele é mais feio que o outro que não está sendo engraxado. Há nisso uma ilusão de ótica, uma visão míope do que é e do que poderá vir a ser. Não se pode esquecer que o sapato que está sendo engraxado daqui a pouco vai estar brilhando mais do que o que não recebeu a graxa."
 	},
 	{
-		"id": 9,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "O pecado da avareza 'Porque o amor ao dinheiro é a raiz de toda a espécie de males; e nessa cobiça alguns (...) se transpassaram a si mesmos com muitas dores.' 1 Timóteo 6:10"
+			"id": 9,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "O pecado da avareza: 'Porque o amor ao dinheiro é a raiz de toda a espécie de males; e nessa cobiça alguns (...) se transpassaram a si mesmos com muitas dores.' 1 Timóteo 6:10."
 	},
 	{
-		"id": 10,
-		"title": "As 25 Leis Bíblicas do sucesso",
-		"author": "William Douglas",
-		"insights": "O dinheiro compra remédios, mas não saúde; compra uma casa, mas não um lar."
+			"id": 10,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "O dinheiro compra remédios, mas não saúde; compra uma casa, mas não um lar."
+	},
+	{
+			"id": 11,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "O dinheiro é um bom escravo, mas um péssimo senhor (Mateus 6:24-27, Lucas 16:14)."
+	},
+	{
+			"id": 12,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Não se esforce para ter prazer, aprenda a ter prazer no esforço."
+	},
+	{
+			"id": 13,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Há estudos que sustentam que, se toda a riqueza do mundo fosse dividida igualmente por todos, em poucos anos ela estaria de volta às mãos de quem já a possui hoje. A razão? Essas são as pessoas que sabem administrar as riquezas e as obteriam de volta."
+	},
+	{
+			"id": 14,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "O pecado da preguiça: 'A preguiça faz cair em profundo sono; e o ocioso padecerá fome.' Provérbios 19:15."
+	},
+	{
+			"id": 15,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "'O que lavra sua terra se fartará de pão, mas o que segue os ociosos é falto de juízo' (Provérbios 12:11)."
+	},
+	{
+			"id": 16,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "O problema das pessoas é que querem vitória, mas não querem passar pelas coisas; querem ser prósperas, mas não querem semear; não querem ficar no mesmo lugar financeiro, mas querem ficar no mesmo lugar quanto a ajudar os outros."
+	},
+	{
+			"id": 17,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Toda vez que queremos ir mais alto, é melhor termos consciência de que a carne necessita ir mais baixo."
+	},
+	{
+			"id": 18,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Nós não podemos ter só a parte de que gostamos. Isso é uma revelação. Você não pode ter só a parte de que gosta. Em todas as coisas haverá o que você não dá a mínima, e, acredite ou não, isso é saudável."
+	},
+	{
+			"id": 19,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Comece a se disciplinar. Monte um planejamento que defina ações e prazos, e cumpra-o. Pense nos frutos que vai colher quando vencer a preguiça e conseguir realizar seus sonhos. Não fique esperando as oportunidades caírem do céu, nem fantasiando que vai ganhar na loteria ou ter uma ideia genial, sem que precise fazer qualquer esforço. Mãos à obra."
+	},
+	{
+			"id": 20,
+			"title": "As 25 Leis Bíblicas do Sucesso",
+			"author": "William Douglas",
+			"insights": "Há um provérbio chinês que diz: 'Quando o jogo acaba, o rei e o peão voltam para a mesma caixa.'"
 	}
 ]
