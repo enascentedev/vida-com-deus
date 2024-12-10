@@ -5,7 +5,7 @@
 				Encontre seu verso em algum livro
 			</h2>
 			<p>
-				Alguns insigths de livros que contém algum passagem que vale uma
+				Alguns insights de livros que contém alguma passagem que vale uma
 				reflexão mais profunda.
 			</p>
 		</div>
@@ -14,29 +14,27 @@
 				<div v-if="currentItem" class="container-artigo">
 					<figure>
 						<img
-							src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/l/i/livro_as_25_leis_b_blicas_do_sucesso.jpg"
+							src="https://m.media-amazon.com/images/I/81TZ3vaz6IL._AC_UF894,1000_QL80_.jpg"
 							alt="imagem do livro"
-						 />
-							<p>
-								<cite>Wiliam Douglas</cite>
-							</p>
+						/>
+						<p>
+							<cite>Wiliam Douglas</cite>
+						</p>
 					</figure>
 					<div class="container-insigth">
 						<h2>{{ currentItem.title }}</h2>
-						<p>
-							{{ currentItem.insights }}
-						</p>
+						<p>{{ currentItem.insights }}</p>
 					</div>
-					
 				</div>
 			</article>
 		</section>
 		<div class="container-button">
-			<button @click="previousItem" :disabled="currentIndex === 0">Anterior</button>
-			<button @click="nextItem" :disabled="currentIndex>= dataLivros.data.length">Próximo</button>
+			<button @click="previousItem">Anterior</button>
+			<button @click="nextItem">Próximo</button>
 		</div>
 	</div>
 </template>
+
 <script>
 import { StoreLivros } from "@/stores/apiLivros";
 
@@ -50,68 +48,75 @@ export default {
 	},
 	computed: {
 		currentItem() {
-			return this.dataLivros.data[this.currentIndex];
+			return this.dataLivros.data[this.currentIndex] || null;
 		},
 	},
 	methods: {
+		// Botão "Próximo" com comportamento circular
 		nextItem() {
-			if (this.currentIndex < this.dataLivros.data.length - 1) {
-				this.currentIndex++;
-			}
+			this.currentIndex = (this.currentIndex + 1) % this.dataLivros.data.length;
 		},
+		// Botão "Anterior" com comportamento circular
 		previousItem() {
-			if (this.currentIndex > 0) {
-				this.currentIndex--;
-			}
+			this.currentIndex =
+				(this.currentIndex - 1 + this.dataLivros.data.length) % this.dataLivros.data.length;
 		},
 	},
 	async mounted() {
-		this.storeLivros = StoreLivros();
-		this.dataLivros = await this.storeLivros.load();
+		try {
+			this.storeLivros = StoreLivros();
+			this.dataLivros = await this.storeLivros.load();
+			if (this.dataLivros.data.length === 0) {
+				console.warn("Nenhum dado encontrado.");
+			}
+		} catch (error) {
+			console.error("Erro ao carregar os dados:", error);
+		}
 	},
 };
 </script>
+
 <style scoped postcss>
 #livros {
-.titulo {
-	@apply p-10;
-	h2 {
-		@apply font-bold tracking-tight text-base-content text-3xl;
+	.titulo {
+		@apply px-10 py-5;
+		h2 {
+			@apply font-bold tracking-tight text-base-content text-3xl;
+		}
+		p {
+			@apply mt-2 text-base text-base-content;
+		}
 	}
-	p {
-		@apply mt-2 text-base text-base-content;
-	}
-}
 	section {
-		@apply w-full h-1/2 px-10;
-		article{
+		@apply w-full h-full px-10;
+		article {
 			@apply shadow-md border-t-2 border-base-200 rounded-md;
-			.container-artigo{
-				@apply flex items-center p-10;
-				figure{
-					@apply h-80 w-80 flex-shrink-0;
-					img{
-						@apply h-auto w-auto object-cover object-center;
+			.container-artigo {
+				@apply flex items-center p-5;
+				figure {
+					@apply h-full w-80 mx-5 flex-shrink-0;
+					img {
+						@apply h-80 w-auto object-cover object-center;
 					}
-					p{
+					p {
 						@apply relative text-center mt-2 text-base-content;
 					}
 				}
-				.container-insigth{
+				.container-insigth {
 					@apply flex flex-col text-sm gap-5;
-					h2{
+					h2 {
 						@apply font-bold text-2xl text-base-content;
 					}
-					p{
+					p {
 						@apply text-base text-base-content;
 					}
 				}
 			}
 		}
 	}
-	.container-button{
-		@apply flex justify-center gap-2 mt-5;
-		button{
+	.container-button {
+		@apply flex justify-center gap-2 my-5;
+		button {
 			@apply hover:bg-sky-500 text-base-content;
 		}
 	}

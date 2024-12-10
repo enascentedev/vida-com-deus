@@ -36,17 +36,22 @@
 			<nav id="mobile-access">
 				<ul >
 					<li>
-						<router-link to="/usuario">
-							Perfil
+						<router-link to="/livros">
+							Leitura diária
 						</router-link>
 					</li>
 					<li>
-						<router-link to="/suporte">
-							Suporte
+						<router-link to="/artigo-semanal">
+							Artigo Semanal
 						</router-link>
 					</li>
 					<li>
-						<router-link to="/login/acesso">
+						<router-link to="/home">
+							Home
+						</router-link>
+					</li>
+					<li>
+						<router-link to="/login" @click="logout()">
 							Sair
 						</router-link>
 					</li>
