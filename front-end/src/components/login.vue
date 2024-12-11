@@ -56,13 +56,6 @@
 				lembrar senha
 			</router-link> -->
 		</form>
-		<div class="suport">
-			<p>Problemas no acesso ou ainda não usa o life com Deus?</p>
-			<a href="##" target="_blank"> Fale com a nossa equipe </a>
-		</div>
-		<div class="copy">
-			<span>Life com Deus:</span>
-		</div>
 	</div>
 </template>
 
@@ -165,14 +158,6 @@ export default {
 			span {
 				@apply max-w-[45ch];
 			}
-		}
-	}
-
-	.suport {
-		@apply text-center mt-3 text-base-content;
-
-		a {
-			@apply block mt-1 underline font-semibold;
 		}
 	}
 
