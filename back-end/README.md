@@ -1,11 +1,26 @@
 
 # API
 
-Criação de API com Node express
+ Criação de API com Node express conectada ao SQL Server
 
 # RODAR PROJETO
 
+1. Configure as variáveis de ambiente abaixo em um arquivo `.env`:
+
+```
+SQL_SERVER_USER=<usuario>
+SQL_SERVER_PASSWORD=<senha>
+SQL_SERVER_HOST=<host ou ip>
+SQL_SERVER_DATABASE=<nome do banco>
+JWT_SECRET=<chave JWT>
+```
+
+2. Instale as dependências e suba a API:
+
+```
+npm install
 npm run api
+```
 
 # ROTAS
 
@@ -19,18 +34,15 @@ back-end/
 | |-- livro.js
 |-- db/
 | |-- conn.js
-| |-- migrateArtigos.js
 |-- middlewares/
 | |-- authMiddleware.js
 | |-- errorMiddleware.js
-|-- models/
-| |-- artigos.js
-| |-- user.js
 |-- rotas/
 | |-- artigos.js
 | |-- livro.js
 | |-- usuarios.js
 |-- servicos/
+| |-- artigos.js
 | |-- livro.js
 |-- .env
 |-- app.js

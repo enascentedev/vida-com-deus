@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const mongoose = require("mongoose");
 const rotaLivro = require("./rotas/livro");
 const rotaUsuario = require("./rotas/usuarios");
 const rotaArtigos = require("./rotas/artigos");
@@ -27,8 +26,11 @@ app.use((err, req, res, next) => {
 });
 
 //DB conexão
-const conn = require("./db/conn");
-conn();
+const { connectToDatabase } = require("./db/conn");
+connectToDatabase().catch((error) => {
+        console.error("Falha ao conectar com o SQL Server:", error.message);
+        process.exit(1);
+});
 
 const port = 8000;
 

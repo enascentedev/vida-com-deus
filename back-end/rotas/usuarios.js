@@ -3,41 +3,83 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../models/user.js");
+const { sql, getPool, connectToDatabase } = require("../db/conn.js");
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-	const { username, password } = req.body;
+        const { username, password } = req.body;
 
-	const existingUser = await User.findOne({ username });
-	if (existingUser) {
-		return res.status(409).send("O usuário já existe");
-	}
+        if (!username || !password) {
+                return res.status(400).send("Usuário e senha são obrigatórios");
+        }
 
-	const user = new User({ username, password });
-	await user.save();
+        try {
+                const pool = await ensurePool();
+                const existingUser = await pool
+                        .request()
+                        .input("username", sql.NVarChar, username)
+                        .query("SELECT id FROM Users WHERE username = @username");
 
-	res.status(201).send("Usuário registrado com sucesso");
+                if (existingUser.recordset.length > 0) {
+                        return res.status(409).send("O usuário já existe");
+                }
+
+                const hash = await bcrypt.hash(password, 10);
+
+                await pool
+                        .request()
+                        .input("username", sql.NVarChar, username)
+                        .input("password", sql.NVarChar, hash)
+                        .query("INSERT INTO Users (username, password) VALUES (@username, @password)");
+
+                res.status(201).send("Usuário registrado com sucesso");
+        } catch (error) {
+                console.error("Erro ao registrar usuário:", error.message);
+                res.status(500).send("Erro ao registrar usuário");
+        }
 });
 
 router.post("/login", async (req, res) => {
-	const { username, password } = req.body;
+        const { username, password } = req.body;
 
-	const user = await User.findOne({ username });
-	if (!user) {
-		return res.status(400).send("Usuário não encontrado");
-	}
+        if (!username || !password) {
+                return res.status(400).send("Usuário e senha são obrigatórios");
+        }
 
-	const isPasswordValid = await bcrypt.compare(password, user.password);
-	if (!isPasswordValid) {
-		return res.status(401).send("Senha inválida");
-	}
+        try {
+                const pool = await ensurePool();
+                const userQuery = await pool
+                        .request()
+                        .input("username", sql.NVarChar, username)
+                        .query("SELECT id, password FROM Users WHERE username = @username");
 
-	const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-		expiresIn: "2d",
-	});
+                const user = userQuery.recordset[0];
+                if (!user) {
+                        return res.status(400).send("Usuário não encontrado");
+                }
 
-	res.send({ token });
+                const isPasswordValid = await bcrypt.compare(password, user.password);
+                if (!isPasswordValid) {
+                        return res.status(401).send("Senha inválida");
+                }
+
+                const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
+                        expiresIn: "2d",
+                });
+
+                res.send({ token });
+        } catch (error) {
+                console.error("Erro ao realizar login:", error.message);
+                res.status(500).send("Erro ao realizar login");
+        }
 });
+
+async function ensurePool() {
+        try {
+                return getPool();
+        } catch (error) {
+                return connectToDatabase();
+        }
+}
 
 module.exports = router;

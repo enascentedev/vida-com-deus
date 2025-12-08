@@ -1,29 +1,36 @@
-const Artigo = require("../models/artigos.js"); // Importe o modelo Artigo
+const { sql, getPool, connectToDatabase } = require("../db/conn");
+
+async function getActivePool() {
+        try {
+                return getPool();
+        } catch (error) {
+                return connectToDatabase();
+        }
+}
 
 // Função para buscar todos os artigos
 async function getTodosArtigos() {
-	try {
-		return await Artigo.find();
-	} catch (error) {
-		throw new Error("Algo deu errado.");
-	}
+        const pool = await getActivePool();
+        const artigos = await pool.request().query("SELECT * FROM Artigos ORDER BY id ASC");
+        return artigos.recordset;
 }
 
 // Função para buscar um artigo por ID
 async function getArtigoPorId(id) {
-	try {
-		const artigo = await Artigo.findById(id);
-		if (!artigo) {
-			throw new Error("Artigo não encontrado.");
-		}
-		return artigo;
-	} catch (error) {
-		throw new Error("Algo deu errado.");
-	}
+        const pool = await getActivePool();
+        const artigo = await pool
+                .request()
+                .input("id", sql.Int, Number(id))
+                .query("SELECT * FROM Artigos WHERE id = @id");
+
+        if (!artigo.recordset[0]) {
+                throw new Error("Artigo não encontrado.");
+        }
+
+        return artigo.recordset[0];
 }
 
 module.exports = {
-	getTodosArtigos,
-	getArtigoPorId,
-	// Outras funções do serviço aqui
+        getTodosArtigos,
+        getArtigoPorId,
 };
