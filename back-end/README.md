@@ -1,37 +1,61 @@
-
 # API
 
 Criação de API com Node express
 
-# RODAR PROJETO
+## RODAR PROJETO
 
 npm run api
 
-# ROTAS
+## VARIÁVEIS DE AMBIENTE
 
-http://localhost:8000/artigos
+- `JWT_SECRET`: segredo para tokens JWT (obrigatório).
+- `ENABLE_REGISTRATION`: `true` (padrão) ou `false` para desligar o registro temporariamente.
+- `DATABASE_URL`: string de conexão do Postgres (Render Postgres fornece automaticamente quando você usa um banco gerenciado).
 
-# ESTRUTURA
+## MIGRAÇÃO / SCHEMA (POSTGRES)
+
+- Scripts de schema ficam em `migrations/`.
+- Para criar a tabela de usuários no Postgres:
+  - `psql "$DATABASE_URL" -f migrations/create_users_pg.sql`
+
+### Windows (sem instalar psql)
+
+- Use a **External Database URL** do Render Postgres para rodar o schema do seu PC:
+  - `powershell -ExecutionPolicy Bypass -File run-migrations.ps1 -ExternalDatabaseUrl "SUA_EXTERNAL_DATABASE_URL_AQUI"`
+- No Render (Web Service), use a **Internal Database URL** como `DATABASE_URL`.
+
+## ROTAS
+
+- Local (porta padrão 3000): [http://localhost:3000/artigos](http://localhost:3000/artigos)
+- Saúde/DB: [http://localhost:3000/health](http://localhost:3000/health)
+
+## ESTRUTURA
 
 back-end/
 |-- controladores/
 | |-- artigos.js
 | |-- livro.js
 |-- db/
-| |-- conn.js
+| |-- migrateArtigos.js
+|-- helpers/
 | |-- migrateArtigos.js
 |-- middlewares/
 | |-- authMiddleware.js
 | |-- errorMiddleware.js
 |-- models/
 | |-- artigos.js
-| |-- user.js
 |-- rotas/
 | |-- artigos.js
 | |-- livro.js
 | |-- usuarios.js
+| |-- health.js
 |-- servicos/
 | |-- livro.js
+| |-- postgresUserService.js
+|-- migrations/
+| |-- create_users_pg.sql
+|-- deploydocker.ps1
+|-- run-migrations.ps1
 |-- .env
 |-- app.js
 |-- artigos.json
@@ -41,7 +65,7 @@ back-end/
 |-- README.md
 |-- teoria.txt
 
-# Documentação de Branchs
+## Documentação de Branchs
 
 ## Visão Geral
 
@@ -110,20 +134,20 @@ Este documento fornece uma visão geral das branchs do projeto, destacando suas 
 
 **Principais mudanças**:
 
-# back-end
+## Back-end
 
 - troca do módulo bcrypt pelo bcryptjs
 - construção e execução imagem docker e adição ao dockerhub
 - criação de variável de ambiente do DB
 - Deploy no render da imagem docker
 
-# front-end
+## Front-end
 
 - troca das url's
 - removendo importações desnecessárias do projeto
 - deploy netlify
 
-# PENDÊNCIAS
+## Pendências
 
 - fotos repetidas na rota /home
 - melhorar header e footer

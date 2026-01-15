@@ -13,9 +13,6 @@ RUN npm install
 # Copie todos os arquivos do projeto para o container
 COPY . .
 
-# Defina a variável de ambiente PORT (opcional)
-ENV PORT=3000
-
 # Expõe a porta que a aplicação vai rodar
 EXPOSE 3000
 
