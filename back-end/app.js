@@ -23,14 +23,13 @@ const errorMiddleware = require("./middlewares/errorMiddleware");
 app.use(errorMiddleware);
 
 app.use((err, req, res, next) => {
-	console.error(err);
-	res.status(500).json({ error: "Ocorreu um erro interno." });
+  console.error(err);
+  res.status(500).json({ error: "Ocorreu um erro interno." });
 });
 
-
-// Render injeta a variável PORT em produção; localmente usamos um fallback
+// Render injeta a variável PORT em produção;
 const port = Number(process.env.PORT || 3000);
 
 app.listen(port, () => {
-	console.log(`Escutando na porta ${port}`);
+  console.log(`Escutando na porta ${port}`);
 });
