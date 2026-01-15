@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: vida-com-deus
+    runtime: image
+    plan: free
+
+    # Mesma imagem que você está usando no Render (Image Web Service)
+    image:
+      url: docker.io/enascentedev/back-end-api:lwg
+
+    # Opcional, mas recomendado para deploys com menos downtime
+    healthCheckPath: /health
+
+    envVars:
+      # JWT (obrigatório para iniciar a API)
+      - key: JWT_SECRET
+        generateValue: true
+
+      # Conexão com Postgres gerenciado pelo Render
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vida-com-deus-db
+          property: connectionString
+
+databases:
+  - name: vida-com-deus-db
+    plan: free
+    databaseName: vida_com_deus
+    # Apenas conexões internas (seguro e ideal para Web Service no Render)
+    ipAllowList: []
+

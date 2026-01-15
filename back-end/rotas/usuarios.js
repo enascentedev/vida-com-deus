@@ -3,37 +3,57 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../models/user.js");
+const {
+	createUser,
+	findUserByUsername,
+} = require("../servicos/postgresUserService.js");
+
 const router = express.Router();
+
+if (!process.env.JWT_SECRET) {
+	throw new Error("JWT_SECRET precisa estar definido");
+}
 
 router.post("/register", async (req, res) => {
 	const { username, password } = req.body;
+	if (!username || !password) {
+		return res.status(400).send("Usuário e senha são obrigatórios");
+	}
 
-	const existingUser = await User.findOne({ username });
+	const existingUser = await findUserByUsername(username);
 	if (existingUser) {
 		return res.status(409).send("O usuário já existe");
 	}
 
-	const user = new User({ username, password });
-	await user.save();
+	const passwordHash = await bcrypt.hash(password, 10);
+	await createUser({ username, passwordHash });
 
 	res.status(201).send("Usuário registrado com sucesso");
 });
 
 router.post("/login", async (req, res) => {
 	const { username, password } = req.body;
+	if (!username || !password) {
+		return res.status(400).send("Usuário e senha são obrigatórios");
+	}
 
-	const user = await User.findOne({ username });
+	const user = await findUserByUsername(username);
 	if (!user) {
 		return res.status(400).send("Usuário não encontrado");
 	}
 
-	const isPasswordValid = await bcrypt.compare(password, user.password);
+	const storedPassword = user.Password || user.password;
+	if (!storedPassword) {
+		return res.status(500).send("Erro ao recuperar o hash de senha");
+	}
+
+	const isPasswordValid = await bcrypt.compare(password, storedPassword);
 	if (!isPasswordValid) {
 		return res.status(401).send("Senha inválida");
 	}
 
-	const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+	const userId = user.Id ?? user.id;
+	const token = jwt.sign({ id: userId }, process.env.JWT_SECRET, {
 		expiresIn: "2d",
 	});
 

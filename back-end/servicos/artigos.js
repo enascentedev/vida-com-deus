@@ -1,29 +1,20 @@
-const Artigo = require("../models/artigos.js"); // Importe o modelo Artigo
+const artigos = require("../artigos.json").artigos;
 
 // Função para buscar todos os artigos
 async function getTodosArtigos() {
-	try {
-		return await Artigo.find();
-	} catch (error) {
-		throw new Error("Algo deu errado.");
-	}
+	return artigos;
 }
 
 // Função para buscar um artigo por ID
 async function getArtigoPorId(id) {
-	try {
-		const artigo = await Artigo.findById(id);
-		if (!artigo) {
-			throw new Error("Artigo não encontrado.");
-		}
-		return artigo;
-	} catch (error) {
-		throw new Error("Algo deu errado.");
+	const artigo = artigos.find((a) => a.id === parseInt(id, 10));
+	if (!artigo) {
+		throw new Error("Artigo não encontrado.");
 	}
+	return artigo;
 }
 
 module.exports = {
 	getTodosArtigos,
 	getArtigoPorId,
-	// Outras funções do serviço aqui
 };
