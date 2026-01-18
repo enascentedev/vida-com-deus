@@ -96,7 +96,7 @@ export default {
 				figure {
 					@apply h-full w-full md:w-80 md:mx-5 flex-shrink-0;
 					img {
-						@apply h-auto w-full object-cover object-center md:h-80;
+						@apply w-full h-32 object-cover object-center md:h-80;
 					}
 					p {
 						@apply relative text-center mt-2 text-base-content;
