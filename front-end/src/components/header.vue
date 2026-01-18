@@ -73,12 +73,12 @@ export default {
 	},
 	async mounted() {
 		// store
-		this.storelogout = StoreUser();
+		this.store = StoreUser();
 	},
 	methods: {
 		logout() {
 			if (this.store) {
-				this.storelogout.logout();
+				this.store.logout();
 			}
 			localStorage.removeItem("authToken");
 			this.$router.push("/login");
@@ -104,7 +104,7 @@ export default {
 			@apply flex justify-between px-5;
 			@apply md:hidden;
 			img{
-				@apply flex flex-1
+				@apply flex flex-1;
 			}
 			input {
 				@apply hidden;

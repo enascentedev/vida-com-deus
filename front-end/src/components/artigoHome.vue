@@ -72,24 +72,24 @@ export default {
 </script>
 <style scoped postcss>
 #artigoHome{
-	@apply h-full w-full p-10 bg-base-100;
+	@apply h-full w-full px-4 py-8 md:p-10 bg-base-100;
 	div{
 		@apply text-center;
 		h2{
-			@apply text-4xl font-bold;
+			@apply text-2xl sm:text-3xl md:text-4xl font-bold;
 		}
 		p{
-			@apply mt-2 text-lg text-base-content;
+			@apply mt-2 text-base sm:text-lg text-base-content;
 		}
 	}
 	.cards{
-		@apply h-full grid md:grid-cols-3 grid-cols-1 gap-5 p-2;
+		@apply h-full grid md:grid-cols-3 grid-cols-1 gap-4 p-2;
 		@apply sm:p-10;
 		article{
 			@apply h-80 relative isolate flex flex-col px-2;
 			.cards-imagem{
-				@apply h-full w-11/12 absolute inset-0 -z-10 object-cover;
-				@apply sm:w-full;
+				@apply h-full w-full absolute inset-0 -z-10 object-cover;
+				@apply sm:w-11/12 sm:mx-auto;
 			}
 			.cards-titulo{
 				@apply w-full flex flex-col items-end justify-center text-sm text-base-100 pr-10;

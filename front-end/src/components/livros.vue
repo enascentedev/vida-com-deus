@@ -79,7 +79,7 @@ export default {
 <style scoped postcss>
 #livros {
 	.titulo {
-		@apply px-10 py-5;
+		@apply px-4 md:px-10 py-5;
 		h2 {
 			@apply font-bold tracking-tight text-base-content text-3xl;
 		}
@@ -88,22 +88,22 @@ export default {
 		}
 	}
 	section {
-		@apply w-full h-full px-10;
+		@apply w-full h-full px-4 md:px-10;
 		article {
 			@apply shadow-md border-t-2 border-base-200 rounded-md;
 			.container-artigo {
-				@apply flex items-center p-5;
+				@apply flex flex-col md:flex-row items-center p-5 gap-4;
 				figure {
-					@apply h-full w-80 mx-5 flex-shrink-0;
+					@apply h-full w-full md:w-80 md:mx-5 flex-shrink-0;
 					img {
-						@apply h-80 w-auto object-cover object-center;
+						@apply h-auto w-full object-cover object-center md:h-80;
 					}
 					p {
 						@apply relative text-center mt-2 text-base-content;
 					}
 				}
 				.container-insigth {
-					@apply flex flex-col text-sm gap-5;
+					@apply flex flex-col text-sm gap-5 text-center md:text-left;
 					h2 {
 						@apply font-bold text-2xl text-base-content;
 					}

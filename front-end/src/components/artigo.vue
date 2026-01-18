@@ -62,7 +62,7 @@ export default {
 
 <style scoped postcss>
 #artigo {
-	@apply w-full h-full flex  p-10 bg-base-100;
+	@apply w-full h-full flex flex-col p-4 sm:p-6 md:p-10 bg-base-100;
 	
 	h2 {
 		@apply text-4xl font-bold text-base-content
@@ -72,16 +72,16 @@ export default {
 	};
 	}
 	article{
-		@apply w-full flex flex-col md:flex-row justify-between gap-2 mt-10;
+		@apply w-full flex flex-col md:flex-row justify-between gap-2 mt-8 md:mt-10;
 		div{
 			@apply relative;
 		.img{
-			@apply sm:absolute sm:inset-0 h-auto w-auto;
+			@apply sm:absolute sm:inset-0 h-auto w-full;
 			@apply flex flex-col
 		}
 		}
 		section{
-			@apply w-full mx-10;
+			@apply w-full mt-4 md:mt-0 md:mx-10;
 			legend{
 				@apply flex items-center gap-4 text-xs;
 				a{
