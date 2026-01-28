@@ -72,7 +72,7 @@ export default {
 </script>
 <style scoped postcss>
 #artigoHome{
-	@apply h-full w-full px-4 py-8 md:p-10 bg-base-100;
+	@apply h-full w-full px-3 py-6 md:p-8 bg-base-100;
 	div{
 		@apply text-center;
 		h2{
@@ -84,27 +84,25 @@ export default {
 	}
 	.cards{
 		@apply h-full grid md:grid-cols-3 grid-cols-1 gap-4 p-2;
-		@apply sm:p-10;
+		@apply sm:p-6;
 		article{
-			@apply h-80 relative isolate flex flex-col px-2;
+			@apply h-80 relative isolate flex flex-col overflow-hidden;
 			.cards-imagem{
 				@apply h-full w-full absolute inset-0 -z-10 object-cover;
-				@apply sm:w-11/12 sm:mx-auto;
 			}
 			.cards-titulo{
-				@apply w-full flex flex-col items-end justify-center text-sm text-base-100 pr-10;
-				@apply sm:pr-0;
+				@apply absolute inset-0 flex flex-col justify-end text-sm text-base-100;
+				@apply p-4 sm:p-6 bg-gradient-to-t from-black/70 via-black/40 to-transparent;
 				span{
-				@apply absolute bottom-20;
-				@apply sm:bottom-10;
+					@apply w-full;
 					h3{
-					@apply text-lg font-semibold text-base-100;
+						@apply text-base sm:text-lg font-semibold text-base-100 break-words;
 					}
 					div{
-						@apply absolute right-0 -bottom-8 flex justify-between gap-2;
+						@apply mt-2 flex items-center gap-2 text-xs sm:text-sm font-bold;
 					}
 					img{
-						@apply h-6 w-6 rounded-full bg-base-100;
+						@apply h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-base-100;
 					}
 				}
 			}
